@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+/* @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css); */
+body {
+    position: relative; 
+}
+h3,h5,p {
+    font-family: 'Noto Sans TC', sans-serif;
+    /* font-family: 'cwTeXYen', sans-serif; */
+    font-weight: 150;
+}
+h2 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 480;
+}
+ul>h2 {
+    font-weight: 390;
+    padding-bottom: 1em;
+}
+h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 100;
+}
+.site-hero h1 {
+    font-weight: 400;
+}
+.second_div>h5 {
+    font-weight: 400;
+}
+p {
+    font-size: 1.15em;
+    font-weight: normal;
+}
+#list-title a {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 400;
+}
+#list-title li {
+    border-style: none;
+    line-height: 1em;
+}
+.list-item {
+    color: rgb(163, 163, 163);
+}
+#list-title a:hover {
+    /* font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500; */
+    color: rgb(31, 31, 31);
+}
+.categories {
+    margin-left: 25%;
+    padding-left: 15px;
+    border-width: 5px;
+    border-left-style: solid;
+    border-color: rgb(119, 117, 117);
+}
+
+.active-item {
+    color: rgb(16, 16, 19);
+}
+.fixed-sidebar {
+    top: 0;
+    position: fixed;
+    width: 20%;
+}
+.fixed-sidebar-top {
+    position: relative;
+}
+
+.img_equalwidth {
+    width: 100%;
+}
+.img_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.div_pacture {
+    margin: 3% 0;
+}
+.div_pacture>p {
+    text-align: center;
+    font-weight: 450;
+    font-size: 0.95em;
+    color: rgb(43, 41, 41);
+}
+.first_div {
+    padding-top: 5%;
+    margin-bottom: 10%;
+    min-height: 60vh;
+}
+.second_div {
+    padding-top: 5%;
+}
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .categories {
+        border-style: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+
