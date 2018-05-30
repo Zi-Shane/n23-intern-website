@@ -1,0 +1,63 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+h1,h2,h3,h4,h5,p,a {
+    font-family: 'Noto Sans TC', sans-serif;
+    /* font-family: 'cwTeXYen', sans-serif; */
+    font-weight: 200;
+}
+.nav-right {
+    /* margin-right: 3vw; */
+}
+.nav-item {
+    padding: 0 1em;
+}
+img {
+    border: none;
+}
+img.env-row1 {
+    height: 18.9vw;
+}
+img.env-row2 {
+    height: 25vw;
+}
+img.env {
+    padding: 0.5vh 0.2vw;
+}
+div.env-pics {
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    div.env-pics {
+        display: none;
+    }
+}
+@media screen and (max-width: 992px) {
+    div.env-pics {
+        -webkit-align-items: center;
+                align-items: center;
+        -webkit-justify-content: center;
+                justify-content: center;
+    }
+}
+#uptotop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+#uptotop:hover {
+    background-color: #555;
+  }

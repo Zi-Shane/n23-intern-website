@@ -88,7 +88,7 @@
         <div class="col-md-8 text-center">
 
           <div class="mb-5 element-animate">
-            <h1 class="mb-3">子軒的實習報告</h1>
+            <h1 class="mb-3">黃子軒的實習報告</h1>
             <!-- <p class="post-meta">January 2, 2018  -->
             <!--  &bull; Posted by
               <a href="#">Joh Doe</a> in
@@ -114,28 +114,28 @@
             <div id="work-detail" class="second_div target">
               <h5>一、工作詳述</h5>
               <div id="pre">
-                <p>(1) 前言：</p>
+                <!-- <p>(1) 前言：</p> -->
                 <p>我們所工作的部門是，歷史語言研究所中的數位文化中心。剛到數位文化中心後，由一位負責數位文化中心技術組的主管—王祥安博士，向我們簡單介紹了數位文化中心，並向我們說明上屆實習的學長姐工作，讓我們選擇有興趣的題目接手、或是其他和中心業務有關的題目。
-                  主管給我們的題目主要分為，網頁開發、社群網路分析、文字探勘及影像處理。也給我們約莫一星期的時間思考自己有興趣的項目。
+                  主管給我們的方向主要分為，網頁開發、社群網路分析、文字探勘及影像處理。也給我們約莫一星期的時間思考自己有興趣的項目。
                 </p>
               </div>
-              <div>
-                <p>(2) 工作內容：</p>
-
+              <div><br>
+                <!-- <p>(2) 工作內容：</p> -->
+                <p class="para-title" style="font-size: 1.4em">練習</p>
                 <p>我選擇題目是文字探勘，在確定題目之後，接下來就是學習之後要用到的技術和工具，主要是Java和Solr。 主管給我一本Java的書，要我先熟悉Java的基本語法，並要我去看Solr的官方文件，先學習這兩個技術，以及一個練習題，要我從這個練習開始，熟悉如何使用Java及Solr。而這個練習是要將一些專家和學者的註解、眉批、頁碼等xml的標籤，還原到Solr的查詢到的文章段落中。</p>
                 <div class="div_pacture">
-                  <img src="images/report/1-1.png" alt="1-1" class="img_equalwidth">
+                  <img src="images/report/1041713/1-1.png" alt="1-1" class="img_equalwidth">
                   <p>上圖為Solr的查詢結果，目標是要將page、qn欄位中的xml標籤，還原到content中原本的位置。</p>
                 </div>
                 <div class="div_pacture">
-                  <img src="images/report/1-2.png" alt="1-2" class="img_equalwidth">
+                  <img src="images/report/1041713/1-2.png" alt="1-2" class="img_equalwidth">
                   <p>完成練習結果，成功將page、qn等xml標籤，還原到content中原本的位置。</p>
                 </div>
-
-                <p>文對文比對功能</p>
+                <br>
+                <p class="para-title" style="font-size: 1.4em">文對文比對功能</p>
                 <p>在練習完成之後，我也對Java稍微比較熟悉了，主管交代給我的工作內容是， 開發數位人文研究平台網站上的文對文比對的功能。開始前，第一件事就是要將開發環境架設好， 用到的工具包括Tomcat、MySQL、Solr，也因為這是一個許多人合作的專案，所有也會用到Git。</p>
                 <div class="div_pacture">
-                  <img src="images/report/1-3.png" alt="1-3" class="img_equalwidth">
+                  <img src="images/report/1041713/1-3.png" alt="1-3" class="img_equalwidth">
                   <p>http://dh.ascdc.sinica.edu.tw/ - 數位人文研究平台</p>
                 </div>
                 <p>數位人文研究平台是由中央研究院數位文化中心(ASCDC)根據人文研究的需求，發展協助學者提升研究質量的數位化工具與平台。數位人文研究平台提供雲端服務，研究者不需擁有強大的運算與儲存設備，只需透過網路即可使用。可提供個人使用，也具有多人協同研究機制，可共享研究資源。</p>
@@ -143,19 +143,19 @@
                 <p>原本數位人文研究平台上，已經有文對文的相似度比對功能了，但主管說舊版的功能效果並不好，因此需要重新改寫。我主要用的相似度判斷方法為，兩段文字中，相同字的所佔的比例，若是高於門檻值，則視為相似的段落。除了找出相似的段落外，還要將段落中相似的句子標記起來。主管也告訴我可以用一個LCS（longest
                   common sequence）最長公共子序列的演算法，用它來找到兩段文字中，相同字所在的位置的位置。</p>
                 <div class="div_pacture">
-                  <img src="images/report/1-4.png" alt="1-4" class="img_center">
+                  <img src="images/report/1041713/1-4.png" alt="1-4" class="img_center">
                   <p>運用LCS最長公共子序列演算法，找出兩段文字中，相似的部分。</p>
                 </div>
                 <p>一開始完成的版本，我的作法是，用一個段落去把比對的目標書中，所有段落都比對過一次的方式，找到相似的段落(例如：我想要拿n個段落，與我的資料庫中的文章找出相似的段落。假設資料庫中有m個段落，那總共比對的是次數就是(n
                   * m)次)，但是搜尋速度太慢。</p>
                 <p>主管告訴我，可以用一個TF-IDF（Term Frequency - Inverse Document Frequency）的計算詞頻的演算法，幫你找一段文字中重要的關鍵段詞，再用這些關鍵詞作為條件向Solr下查詢，再用查詢的結果作比對就好，這樣可以減少需要比對的次數(減少m的數量)。</p>
                 <div class="div_pacture">
-                  <img src="images/report/1-5.png" alt="1-5" class="img_equalwidth">
+                  <img src="images/report/1041713/1-5.png" alt="1-5" class="img_equalwidth">
                   <p>利用TF-IDF這個詞頻演算法，找到一段文字中重要的詞，再用這些關鍵詞組成Solr的查詢語法，向Solr下查詢，再用查詢的結果，與原文本作比對，藉此加快查詢速度。</p>
                 </div>
                 <p>再經過主管建議的方法修改後，查詢的速度已經有顯著提升。</p>
                 <p>接下來就是如何把結果呈現在網頁上，也就是網頁前後端的串接，網頁後端也是用Java作開發，也因為自己之前有碰過php，用Java開發網頁時發現，其實兩者的概念是差不多的，因此也沒有遇到較大困難。</p>
-                <p>除了網頁呈現的部分，主管也會常常提出一些修改建議，例如:在比對相似度的方法，希望能考量到相同文字的密集程度。希望我們可以嘗試看看，把這個想法時做出來，比較看看效果如何。</p>
+                <p>除了網頁呈現的部分，主管也會常常提出一些修改建議，例如:在比對相似度的方法，希望能考量到相同文字的密集程度。希望我們可以嘗試看看，把這個想法實作出來，比較看看效果如何。</p>
                 <p>因為我們所開發的功能是要真正上線，讓使用者去使用的，因此經常需要和主管討論，一些需要改善或修改的部分、增加新需求，還有例外情況的處理。過程中經常會需要去嘗試各種不同的比對方法，實驗看看能不能提升正確率，主管也給我們很大的彈性，並不會要求我們在期限內一定要完成，反倒是希望我們花多一點時間去交叉驗證，或是更好的解決方法。</p>
               </div>
             </div>
@@ -169,21 +169,21 @@
               <br>
               <p style="font-weight: 600">功能一：</p>
               <div class="div_pacture">
-                <img src="images/report/1-6.png" alt="1-6" class="img_equalwidth">
+                <img src="images/report/1041713/1-6.png" alt="1-6" class="img_equalwidth">
                 <p>選擇欲比對文本、查詢條件和目標書，進行相似度比對。</p>
               </div>
               <div class="div_pacture">
-                <img src="images/report/1-7.png" alt="1-7" class="img_equalwidth">
+                <img src="images/report/1041713/1-7.png" alt="1-7" class="img_equalwidth">
                 <p>查詢結果</p>
               </div>
               <br>
               <p style="font-weight: 600">功能二：</p>
               <div class="div_pacture">
-                <img src="images/report/1-8.png" alt="1-8" class="img_equalwidth">
+                <img src="images/report/1041713/1-8.png" alt="1-8" class="img_equalwidth">
                 <p>由使用者輸入欲比對文本、選擇查詢條件和目標書，進行相似度比對。</p>
               </div>
               <div class="div_pacture">
-                <img src="images/report/1-9.png" alt="1-9" class="img_equalwidth">
+                <img src="images/report/1041713/1-9.png" alt="1-9" class="img_equalwidth">
                 <p>查詢結果， 並讓使用者可以再次輸入文章作比對</p>
               </div>
             </div>
@@ -214,11 +214,11 @@
                 而我們把LCS應用在兩段文字中，找到相同字的部分。
               </p>
               <div class="div_pacture">
-                <img src="images/report/2-1.png" alt="2-1" class="img_center">
+                <img src="images/report/1041713/2-1.png" alt="2-1" class="img_center">
                 <p>運用LCS最長公共子序列演算法，找出兩段文字中，相似的部分。</p>
               </div>
               <div class="div_pacture">
-                <img src="images/report/2-2.jpg" alt="2-2" class="img_center">
+                <img src="images/report/1041713/2-2.jpg" alt="2-2" class="img_center">
                 <p>在一堆字裡面,相似子字串有相同左上的箭頭連在，一起最長的就是最長公共子序列。</p>
               </div>
             </div>
