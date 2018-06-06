@@ -10,6 +10,9 @@ h1,h2,h3,h4,h5,p,a {
 .nav-item {
     padding: 0 1em;
 }
+.site-section {
+    padding-top: 4.5em;
+}
 img {
     border: none;
 }
