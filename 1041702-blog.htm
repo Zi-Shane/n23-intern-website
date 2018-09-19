@@ -20,10 +20,89 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/1041702-page.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
+
+<style type="text/css">
+A.class_content:link {color: gray}
+A.class_content:visited {color: gray}
+A.class_content:active {color: green}
+A.class_content:hover {color: red}
+A.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+<style type="text/css">
+A.class_directory:link {color: white}
+A.class_directory:visited {color: white}
+A.class_directory:active {color: green}
+A.class_directory:hover {color: red}
+li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 16px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+ul.nav-pills {
+      position: fixed;
+  }
+.dropdown-menu li:hover .sub-menu {visibility: visible;}
+.dropdown:hover .dropdown-menu {display: block;}
+</style>
+  
 </head>
 
-<body>
-
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
   <header role="banner">
 
     <nav class="navbar navbar-expand-md navbar-dark bg-light">
@@ -40,17 +119,6 @@
               <a href="index.htm" class="nav-link">首頁</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">目錄</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown05">
-                <a class="dropdown-item" href="#工作詳述">工作詳述</a>
-                <a class="dropdown-item" href="#實習進度">實習進度</a>
-                <a class="dropdown-item" href="#工作角色">工作角色</a>
-                <a class="dropdown-item" href="#學習">學習</a>
-                <a class="dropdown-item" href="#自我評估及心得感想">自我評估及心得感想</a>
-                <a class="dropdown-item" href="#對系上的建議">對系上的建議</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他人的網頁</a>
               <div class="dropdown-menu" aria-labelledby="dropdown05">
                 <a class="dropdown-item" href="1041621-blog.htm">1041621蘇建文</a>
@@ -59,6 +127,7 @@
               </div>
             </li>
           </ul>
+
         </div>
       </div>
     </nav>
@@ -83,310 +152,420 @@
   </section>
   <!-- END section -->
 
-
   <section class="site-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 blog-content">
-          <article id="工作詳述">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 blog-content">
+          <article id="工作內容">
             <p class="lead">
-              <h3>
-                <b>工作詳述</b>
-              </h3>
+              <h2>
+                <b>工作內容</b>
+              </h2>
             </p>
             <p>
-              <b>研究背景</b>
+			<h3 align="center" id="摘要">
+              <b>摘要</b>
+			</h3>
             </p>
+			<br>
 
-            <blockquote>
-              <p>研究時下最流行互動式裝置技術，使傳統文化能更加貼近大眾生活，引發社會大眾對於傳統文化的興趣。為了達成以上目的，提出了以windows開發的kinect為硬體基礎所延伸出的各項軟體功能。</p>
-            </blockquote>
 
-            <p>
-              <b>系統功能簡介</b>
+            <p align="justify">　　隨著網際網路的發達，現代人的消費型態逐漸從實體商店轉為網路商店，根據中華民國經濟部統計處調查，台灣電子購物業營業額從民國100年之1103億元，攀升至民國106年之1695億元，其中衣服及服飾配件業占16.0%。為了搶佔如此龐大的商機，業者紛紛推出線上試衣功能試圖吸引消費者注意。</p>
+			<p align="justify">　　但目前線上試衣或是透過行動APP試衣的軟體，具有一項很大的限制，就是必須透過其他設備擁有人體數據才有辦法進行線上試衣。</p>
+			<p align="justify">　　本研究為了實現隨時隨地都能使用本研究中的功能，採用以單張影像實現虛擬試衣間功能，並以YOLOv3偵測人體位置製作初步mask改善GrabCut運算效率，運用OpenPose標定出人體關節點位置，使得衣服貼合位置更精確，並且以肩寬估計出側身角度，使衣服能更切合人體原先姿態。</p>
+			<p align="justify">　　考量購買衣服的動機並非只有為自己購買，還可能是情侶間的情侶裝或是親子間的親子裝，因此本研究不僅支援單人著裝，亦支援多人著裝。</p>
+			<p>關鍵詞: <a href="#" class=class_content>單張影像</a>, <a href="#" class=class_content>GrabCut改善</a>, <a href="#" class=class_content>虛擬試衣間</a>			</p>
+			<br>
+			<h3 id="前言">
+              <b>1.前言</b>
+			</h3>
+			<br>
+			<p align="justify">　　近年來，消費者的消費型態逐漸從實體商店轉為網路商店 <a href="#r1" class=class_content>[1]</a>，虛擬試衣間成了一項提升消費者購買意願的工具，但線上試衣卻苦於收集人體數據時仍須有特定設備，並不能算是完全的線上試衣，同時，基於行動裝置照相技術的改進，與社群媒體的興起，帶動了大眾隨時隨地照相的風氣，但大量的照片卻並沒有好的應用方向，基於以上兩種因素，我試圖結合兩者，創造出一種具備價值的應用，因此開發出依據單張影像實現虛擬試衣間的功能，讓消費者可以隨時隨地，無時無刻的體驗試衣，不被設備所侷限。</p>
+			<br>
+			<p>
+			<h3 id="文獻探討">
+              <b>2.文獻探討</b>
+			</h3>
             </p>
-            <blockquote>
-              <p>開發虛擬試衣間，使用者只需站在鏡頭前，即可自動進行更衣，同時，配合簡單手勢操作，可替換其他衣服，對於背景不滿意的話，也可以隨時更換背景，讓使用者達到身在異地的錯覺。同時也設有拍照功能，讓使用者隨時隨地可以留下紀念。</p>
-            </blockquote>
-
-            <p>
-              <b>系統開發工具與技術</b>
-            </p>
-            <blockquote>
-              <p>硬體：Kinect V2</p>
-              <p>軟體：AR部分：WPF</p>
-              <p>2D照片處理部分：OpenCV、YOLO</p>
-            </blockquote>
-
-            <p>
-              <b>系統使用環境</b>
-            </p>
-            <blockquote>
-              <p>Windows作業系統</p>
-            </blockquote>
-
-            <p>
-              <b>系統特色</b>
-            </p>
-            <blockquote>
-              <p>自動定位人物位置換上衣物</p>
-              <p>提供多樣化背景進行更換</p>
-              <p>提供上傳2D照片進行更衣</p>
-              <p>提供上傳2D照片進行更換背景</p>
-            </blockquote>
-
-            <p>
-              <b>系統功能介紹</b>
-            </p>
-
-            <p>介面：</p>
-            <img src="images/report/1041702/system1.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>倒數畫面：</p>
-            <img src="images/report/1041702/system2.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>拍攝完成畫面：</p>
-            <img src="images/report/1041702/system3.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>照片示例：</p>
-            <img src="images/report/1041702/system4.png" alt="Image placeholder" class="img-fluid mb-4">
-            <hr />
-            <p>
-              <b>2D照片處理：</b>
-            </p>
-            <p>原圖：</p>
-            <img src="images/report/1041702/2D1.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>辨識結果：</p>
-            <img src="images/report/1041702/2D2.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>自動切圖：</p>
-            <img src="images/report/1041702/2D2.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>自動去背：</p>
-            <img src="images/report/1041702/2D2.png" alt="Image placeholder" class="img-fluid mb-4">
-
-
-            <div class="pt-5">
-              <p>Categories:
-                <a href="#工作詳述">工作詳述</a> Tags:
-                <a href="#">#Open CV</a>,
-                <a href="#">#Kinect</a>
-                <a id="share_up" href="#" title="回頂端" alt="回頂端">
-                  <img src="images/report/1041702/return.png" class="img-fluid mb-4">
-                </a>
-              </p>
-            </div>
-            <hr />
+			<br>
+            <p align="justify">　　有關虛擬試衣間的研究，部分偏向使用多部攝影機採集深度訊息<a href="#r2" class=class_content>[2]</a>，或是使用紅外線探測深度<a href="#r3" class=class_content>[3]</a>，也有一部分先對使用者進行3D掃描採集人體數據<a href="#r4" class=class_content>[4]</a>，這幾種方式雖然具有相當的精準度，但或礙於設備，或礙於使用者周遭環境，並不是無時無刻都能使用，缺乏即時性。於<a href="#虛擬試衣間相關研究" class=class_content>2.1</a>節我們探討三篇虛擬試衣間相關研究與一個實際案例，並分析利弊。</p>
+			<p align="justify">　　此外，對於本研究所需之相關技術，於<a href="#前後景分離" class=class_content>2.2</a>節介紹前後景分離，於<a href="#人體檢測" class=class_content>2.3</a>節介紹人體檢測定位，於<a href="#關節點檢測" class=class_content>2.4</a>節介紹關節點檢測定位，並對這幾種技術分析相關利弊，解說本研究採取該技術之相關原因。</p>
+			<br>
+            <h4 id="虛擬試衣間相關研究">
+              <b>2.1虛擬試衣間相關研究</b>
+			</h4>
+			<br>
+			<p align="justify">　　Dimitris Protopsaltou等人<a href="#r2" class=class_content>[2]</a>提出了運用了現實衣服尺寸的規格，同時引用日內瓦大學相關引擎模擬現實物理參數的技術，在配戴相關感應設備的情況下，由多部攝影機收集數據，最後利用相關數據進行對應處理。雖然擁有很精準的效果，但需要有多台攝影機收集數據，同時須計算衣襬垂落等物理特性，未能達到即時性的效果。</p>
+			<p align="justify">　　Ya-Yun Chen提出有關二維線上虛擬試衣間之研究與開發<a href="#r3" class=class_content>[3]</a>，該論文提出以Kinect作為輔助工具，做出半自動去背，但此種方法有設備上的限制，無法達到隨時隨地都能使用，同時Kinect對於被遮擋的目標感測效果不好，且Kinect目前已停產，對於後續開發利用，著實不便。</p>
+			<p align="justify">　　Scott William Curry等人提出<a href="#r4" class=class_content>[4]</a>以3D掃描取得使用者的身體數據，配合已知的物理與材料特性，為使用者套上衣服，優點是看起來真實，但缺點是需要先經過3D掃描才能做後續的處理，有著設備與地點上的限制。</p>
+			<p align="justify">　　Style.me是一個主打3D虛擬線上試衣間的網站<a href="#r5" class=class_content>[5]</a>，他們需要使用者提供身高、體重、三圍作為他們虛擬模特兒的體態模擬數據，不需要額外設備，也能做到3D試衣的功能，但缺點是使用者需要自己輸入身高、體重、三圍，使得使用者需要先測量好自己的相關數據，才能進行試衣，不夠自動化。</P>
+            <br>
+			<h4 id="前後景分離">
+              <b>2.2前後景分離</b>
+			</h4>
+			<br>
+			<p align="justify">　　為了讓使用者能針對不同的背景進行不同的搭配，因此必須將使用者從原先影像的背景中提取出來。要將影像從原先背景提出就需要用到前後景分離的技術，其中最知名的就是GrabCut<a href="#r6" class=class_content>[6]</a>。</p>
+			<p align="justify">　　GrabCut是基於GraphCut<a href="#r7" class=class_content>[7]</a>所研究出來的技術，與它的前身不同，GrabCut目標背景模型採用RGB三通道混合高斯模型(Gaussian mixture model,在此簡稱GMM)，在每個像素中，計算RGB的GMM權重、GMM的均值向量，以及GMM協方差矩陣，歸類為前景權重或是背景權重，最後依此判斷出前後景的邊線。對於處理高解析度圖片耗時長是一大問題，同時對於複雜背景或是顏色相近前後景處理成果也不佳。GrabCut中有使用border matting<a href="#r8" class=class_content>[8]</a>的技術對邊緣進行平滑化，但因具有專利問題，本研究中不使用這項技術。</p>
+			<br>
+			<h4 id="人體檢測">
+              <b>2.3人體檢測</b>
+			</h4>
+			<br>
+			<p align="justify">　　電腦並不能像人類一樣識別影像中具有何種物體，對於電腦來說，影像就只是像素集合而成的像素點矩陣，因此想要將人體從影像中提取出來，必須先檢測出人體位置的範圍才行，為了試衣間運行的速度，我們採用號稱最快速做到影像辨識的機器學習框架YOLO<a href="#r9" class=class_content>[9]</a>。</p>
+			<p align="justify">　　YOLO透過對整張影像切分成S×S大小的格子，對每個格子進行預測，如此省去了每次預測不同物體重新卷積整張圖像的時間。在本研究中結合YOLO的速度特點，將判定為人體的方格設定為前景權重，其餘設定為背景權重，即可在第一次尋找範圍時，節省大量的運算時間。</p>
+			<br>
+			<h4 id="關節點檢測">
+              <b>2.4關節點檢測</b>
+			</h4>
+			<br>
+			<p align="justify">　　在<a href="#人體檢測" class=class_content>2.3</a>節中我們提到使用YOLO找出人體位置的技術，但是YOLO找出的框在每個人身上套的不會是同一個位置，無法因此推斷衣服貼合的位置，因此我們需要檢測關節點，來確定衣服貼合位置，OpenPose<a href="#r10" class=class_content>[10]</a><a href="#r11" class=class_content>[11]</a>就是一項關節點檢測的相關技術。</p>
+			<p align="justify">　　Shih-En Wei等人提出關節點的檢測，需要其他關節點的提示，因此擴大了卷積網路的感受野[10]。經過實測，在正面的狀況下，幾乎可以達到完美的效果，但在側面的狀況下，容易因為衣服不同而導致判斷錯誤，如外套分兩側，會只將關節點判斷在其中一側。</p>
+			<p align="justify">　　隔年，Shih-En Wei等人提出<a href="#r11" class=class_content>[11]</a>改善<a href="#r10" class=class_content>[10]</a>所提及的關鍵點檢測問題，透過匈牙利算法的技術，對合適的兩關節進行相連，權重分配用到了他們的相關性。</p>
+			<br>
+			<h3 id="研究方法">
+              <b>3.研究方法</b>
+			</h3>
+			<br>
+			<br>
+			<h4 id="研究限制">
+              <b>3.1研究限制</b>
+			</h4>
+			<br>
+			<p align="justify">　　本研究所實驗之服飾為2D圖像照片，不包含3D服裝，因此對於側面(轉身90度)及背面(轉身180度)不做處理。同時，使用者拍照姿勢各式各樣，無法完全精準模擬，因此只針對雙手自然垂放且直立的人體進行處理，舉凡彎腰或舉手或蹲下等情況則不另做處理。</p>
+			<br>
+			<h4 id="使用環境">
+              <b>3.2使用環境</b>
+			</h4>
+			<br>
+			<p align="justify">使用工具：OpenCV:3.4.0<a href="#r12" class=class_content>[12]</a>負責處理<a href="#衣服變形處理" class=class_content>4.3</a>節衣服大小調整、衣服變形處理，OpenPose：1.3.0<a href="#r10" class=class_content>[10]</a><a href="#r11" class=class_content>[11]</a>負責處理關節點檢測，YOLO：YOLOV3<a href="#r9" class=class_content>[9]</a>負責處理人物位置檢測，作業系統：Microsoft Windows10，硬體配置：CPU：i7-7700 RAM：12GB</p>
+			<br>
+			<h4 id="功能架構">
+              <b>3.3功能架構</b>
+			</h4>
+			<br>
+			<p align="justify">　　圖1為本研究系統之功能流程圖，以下解釋研究系統功能架構之運作方法。</p>
+			<p align="center"><img src="images/report/1041702/功能流程圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 1 功能流程圖</p>
+			<p align="justify">　　首先，在開始的部分，使用者需要先選擇想更換的衣服以及想替換的背景，選擇完畢後，系統進入人物檢測的部分。</p>
+			<p align="justify">　　在人物檢測的部分，進行以下三步驟的處理</p>
+			<p align="justify">1.	以YOLO計算人物中的位置，並回傳座標</p>
+			<p align="justify">2.	以OpenPose計算人物中的關節位置，並回傳座標。</p>
+			<p align="justify">3.	比對YOLO回傳之人物座標與OpenPose回傳之關節座標，若人物座標包含所有關節座標，則此人存在，其餘皆視為不存在。</p>
+			<p align="justify">若人物存在，即進行下一部份，重疊處理，若不存在，則直接結束程式。</p>
+			<p align="justify">　　重疊處理的部分，首先區分為單人及多人。依據人物檢測傳遞之人物座標數量，可以判斷此圖為單人抑或多人。若判斷為單人，則直接進入前後景分離，若為多人，則需以不同情況進行重疊處理。重疊情況我分為3種，完全重疊，左右重疊，以及上下重疊。3種情況分別做以下處理：</p>
+			<p align="justify">1.	完全重疊：例如親子合照，為了全部人能入鏡，則小孩(體型小)會在大人(體型大)前方，因此圖層順序以體型小在前，體型大在後。</p>
+			<p align="justify">2.	左右重疊：這部分並不容易判斷，因具有體型問題，容易有誤判情況。但在此，我假定重疊兩人體型相差不大，則根據人物距離鏡頭的遠近，可以判斷出距離鏡頭近的體型看起來較大，距離鏡頭遠的體型看起來較小，因此圖層順序以體型大在前，體型小在後。</p>
+			<p align="justify">3.	上下重疊：在這部分就不容易出現誤判的情形，因照相時，無論是因距離鏡頭較遠而在圖片偏上的位置，或是體型大而在圖片偏上的位置，都會是在後方，因此圖層順序以位於圖片下方在前，圖片上方在後。</p>
+			<p align="justify">詳細處理判斷見<a href="#重疊判斷" class=class_content>4.1</a>節。處理完重疊部分的圖層判斷後，便進入前後景分離的部分。</p>
+			<p align="justify">　　前後景分離的部分，一次以一人做處理。對於原先純粹使用GrabCut會對整張圖片做處理，容易被特徵明顯，如遠處金屬光澤所干擾，我在此部分有所改進，我利用人物檢測部分檢測到的人物座標製作GrabCut的初步mask。此mask製作方法如下，先將YOLO判斷為人標籤的方格設定為前景，其餘在邊界外方格設為背景，如此可以加快GrabCut判斷前景背景的速度。再以製作出的mask進行GrabCut的運算，最後成功分離出前景及背景。前後景分離處理完畢後，程序進入衣服變形處理的部分。</p>
+			<p align="justify">　　衣服變形處理，我分為兩個步驟去執行。</p>
+			<p align="justify">1.	調整衣服大小：在這一步驟中，因為使用者上傳的圖片像素大小不同，人物佔全圖比例也不同，用同樣大小衣服直接貼合顯然是不對的，因此我依據肩寬去調整衣服大小，使衣服能完美貼合使用者身形，調整衣服大小我採用雙線性插值<a href="#r13" class=class_content>[13]</a>，因為調整後的衣服大小並不一定是整數，無法完整落於像素點上，因此需要使用雙線性插值對小數點進行調整，使紋理呈現更平滑。</p>
+			<p align="justify">2.	計算雙肩傾斜程度：人體或是因為站姿，或是因為側身，雙肩很少會達到水平的狀態。在此，我先以肩寬與身長的比例來判斷雙肩傾斜是因為站姿或是側身。判斷標準見4.3節。若是站姿問題，則調整衣服雙肩位置以符合使用者肩線。若是側身問題，則以雙肩高度差作依據，在肩膀較高一側上下各加雙肩高度差，如圖2所示，矩形a為未側身前衣服圖片，橙色梯形為側身後衣服圖片，矩形b為依據肩寬調整後之衣服圖片，三角形則為雙肩高度差形成之面積，在未能得知未側身前之衣服大小的情況下，我們以上方加入雙肩高度差，同時下方加入雙肩高度差，即可形成側身後的效果，同時因雙肩肩寬是側身後所測量，因此能呈現出側身後大小，看起來較為真實。計算衣服傾斜角度：人體在影像中可能因為拍照姿勢的不同造成下半身與上半身並非鉛直的狀態，因此我依據髖骨座標與肩膀座標的對應，計算衣服傾斜的角度，使得衣服肩膀能對到肩線，衣服下襬部分也能對齊兩側髖骨。</p>
+			<p align="center"><img src="images/report/1041702/側身轉換示意圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 2 側身轉換示意圖</p>
+			<p align="justify">處理完衣服的變形部分後，就進入合成的階段。</p>
+			<p align="justify">　　在合成的階段，我首先先將前後景分離部分分離出的前景合成到使用者挑選的新背景上，再將衣服合成到人物上。合成完畢後，判斷現在合成的人物是否是人物檢測部分所判斷的最後一個人，若是最後一個人，則程序結束，若否，則進入下一個人的前後景分離程序，直到執行到最後一個人為止。</p>
+			<br>
+			<h3 id="實驗過程">
+              <b>4.實驗過程</b>
+			</h3>
+			<br>
+			<h4 id="重疊判斷">
+              <b>4.1重疊判斷</b>
+			</h4>
+			<br>
+			<p align="justify">　　應付多人檢測的狀況下，不可避免的，我們會遇到人與人之間相互遮擋的重疊問題。大致上，我們可以把人與人之間的重疊問題，分成完全重疊與部分重疊。</p>
+			<p align="justify">　　完全重疊的部分，見圖3(左)，如大人與小孩，基於不被遮擋的狀況下，可檢測出有兩個人，判斷前後順序可判斷出體型小者(小孩)會在前，體型大(大人)會在後，才不會出現檢測不到體型小(小孩)的問題。</p>
+			<p align="justify">　　部分重疊的部分，又能細分為左右重疊及上下重疊。左右重疊的狀況，見圖3(中)，一樣以體型作為區分，越靠近鏡頭的人體，理應體型越大，因此體型較小者會距離鏡頭較遠，如遇到體型較嬌小者雖靠近鏡頭較近，卻無法明顯區分出與遠離鏡頭但體型高大者的區別時，將與上下重疊的方法進行結合。上下重疊的狀況，見圖3(右)，我們可以很明顯地得到腳距離影像最下方越遠時，具離鏡頭越遠。撇開為了拍出浮空照片等特殊情況，人體拍照時，腳會與地面貼合，同時現實中的地平線對於照片中每個人會是相等的，依據消失點的理論<a href="#r14" class=class_content>[14]</a>，我們可以得知，為了將3D畫面呈現在2D屏幕上，地平線會往消失點匯聚，造成人站的位置不一樣高，因此可以以腳的位置推斷出前後順序，如遇到拍照缺失腳的情況下，則以此類推，往上找其他關節當作基準點，進行對照。</p>
+			<p align="center"><img src="images/report/1041702/重疊示意圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 3 示意圖(左)完全重疊，(中)左右重疊，(右)上下重疊</p>
+			<br>
+			<h4 id="前後景分離2">
+              <b>4.2前後景分離</b>
+			</h4>
+			<br>
+			<p align="justify">　　針對前後景分離的部分，使用Graz數據集<a href="#r15" class=class_content>[15]</a>進行實驗，透過實驗，大小為480x640像素圖片，人物佔全圖比例大(90%)，約莫需要9.093秒(計時單位採時脈計算，以下皆同)，對於使用者來說，速度太慢了，因此我結合YOLO標定人體位置的方式，初步製作GrabCut的mask，再利用此mask對圖片進行運算，最後得出結果約為4.686秒，節省了將近一半的時間，同時也得到較佳的分離結果。同時，我也對人物相對全圖比例小(15%)進行實驗，不使用YOLO製作mask需要耗費13.092秒，而使用YOLO製作mask加起來總秒數卻只花3.052秒，時間消耗只有四分之一，結論見表1。人物比例佔全圖越小，使用GrabCut處理全圖耗費時間越長，而使用YOLO製作mask人物佔全圖比例越小，則節省時間越多。在此節，使用之YOLO權重為YOLOv3 weight<a href="#r9" class=class_content>[9]</a>分類器為COCO dataset<a href="#r16" class=class_content>[16]</a>。</p>
+			<p align="center">表 1 前後景分離對比結果</p>
+			<table  align="center" border="1">
+			<tr>
+			<td align="center">使用方式</td>
+			<td align="center">GrabCut處理全圖</td>
+			<td align="center">YOLO決定初步位置+GrabCut處理</td>
+			</tr>
+			<tr>
+			<td align="center">佔全圖比例大(90%)<p>時間(s)</p></td>
+			<td align="center">9.093</td>
+			<td align="center">1.698+2.988</td>
+			</tr>
+			<tr>
+			<td align="center">佔全圖比例小(15%)<p>時間(s)</p></td>
+			<td align="center">13.092</td>
+			<td align="center">1.666+1.386</td>
+			</tr>
+			</table>
+			<br>
+			<h4 id="衣服變形處理">
+              <b>4.3衣服變形處理</b>
+			</h4>
+			<br>
+			<p align="justify">1.	衣服肩線校正</p>
+			<p align="justify">　　依據論文<a href="#r17" class=class_content>[17]</a>採樣，人體在自然放鬆的狀況下，踝關節等身體關節會隨著外在環境影響或疲累等自主切換關節角度，導致站姿不會左右相等。對於此種狀況，我計算左右肩膀高度差，如果測量高度差座標小於1，那就當作誤差無視，如果高度差座標大於等於1，則依據肩膀高度差進行換算衣服變形。原圖見圖4(左)，圖4(中)為使用OpenPose檢測之關節結果，可見檢測出之雙肩位置非水平，圖4(右)對衣服做相關變換後，使衣服符合雙肩位置，對到肩線。</p>
+			<p align="center"><img src="images/report/1041702/肩線校正圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 4 (左)原圖<a href="#r15" class=class_content>[15]</a>，(中)檢測關節，(右)衣服校正結果，衣服<a href="#r18" class=class_content>[18]</a></p>
+			<p align="justify">2.	透視變換</p>
+			<p align="justify">　　人體側身對於人類來說，十分容易辨別，因為人類能以雙眼交疊的影像形成深度，進而判斷出人體現在是側身。對於計算機視覺來說，側身與正面並沒有不同，兩者均有X軸，Y軸訊息，同時缺失深度訊息，因此讓電腦利用2D影像模擬出3D訊息著實困難。</p>
+			<p align="justify">　　在此，我假設正面肩寬與身長的比例約為0.6:1，經數據集挑選出之正面圖片驗證後，無一例外，因此在此可得出肩寬約為身長的0.6倍。但因照片俯仰角度有可能會造成計算誤差，因此我放寬0.1的標準，以肩寬為身長0.5倍作為基準，判斷照片中人體是否側身。</p>
+			<p align="justify">　　假設人體是側身的狀況下，人體的肩線與兩側髖骨間的連線會匯聚在一個點，稱為消失點。在關節點檢測的結果中，我們看不出兩側髖骨的高度差關係，但卻可以明確看出雙肩的高度差，因此我以雙肩高度差取得消失點上方斜率，再於肩膀較高一側之髖骨位置做相反斜率，最終這兩條斜率會於消失點匯聚。以此兩條線作透視變換，便能成功得到衣服的傾斜角度及紋理。圖5(左)為原圖，可很明顯看出肩膀往圖片右側傾斜;圖5(中)為未進行透視變換直接進行貼圖，雖然能直接遮蓋住衣服的部分，但無法貼合肩線;圖5(右)為進行透視變換後進行貼圖，可以看出衣服已經貼合肩線，但因無光影變化，難以看出傾斜的深度。</p>
+			<p align="center"><img src="images/report/1041702/側身對比圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 5 (左)原圖<a href="#r15" class=class_content>[15]</a>，(中)透視變換前，(右)透視變換後，衣服<a href="#r19" class=class_content>[19]</a></p>
+			<p align="justify">3.	關節點檢測修正</p>
+			<p align="justify">　　以OpenPose對人體進行關節點檢測，大部分狀況下，都能得到不錯的結果，但是對於分開成兩側的夾克、外套等衣服，容易將髖骨部分判斷在同一側，造成扭曲的衣服形狀。</p>
+			<p align="justify">　　經過觀察，人物向右轉身(以人物面對方向為基準)髖骨座標容易集中在右側，人物向左轉身，髖骨座標容易集中在左側。因此我以雙肩座標減去(左髖骨+右髖骨座標)，取距離較近者作為基準點，以此節第二部分提出之平行線方法，加以延伸，便可修正關節點檢測錯誤之問題。</p>
+			<p align="justify">4.	錯誤檢測資料
+			<p align="justify">　　實驗過程中，發現了幾件特例會產生錯誤檢測資料，因此對程式進行了條件過濾，以防止此類特殊檢測資料造成程式運行錯誤。由圖6(左)可以看到多人靠近容易將全部人的關節連在一起，形成肩寬特寬的異常情形；圖6(中)可以看出側面容易判斷在外套其中一側，圖6(右)可以看出彎腰動作容易造成關節的連結錯誤。
+			<p align="center"><img src="images/report/1041702/錯誤檢測.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 6 錯誤檢測結果 原圖左<a href="#r20" class=class_content>[20]</a>，中、右<a href="#r15" class=class_content>[15]</a></p>
+			<br>
+			<h4 id="合成">
+              <b>4.4合成</b>
+			</h4>
+			<br>
+			<p align="justify">　　在合成的部分，首先要先確定背景圖大小與分離出的前景大小，確保前景大小不會超出背景圖，如果超過，則需要調整大小到背景圖大小範圍內。對於前景合成到背景處，我一律採用水平置中，垂直置下，使圖片畫面較為合諧。</p>
+			<p align="justify">　　處理完前景圖後，衣服的合成也是如同前景圖的判斷，因為衣服是根據前景圖大小調整過的，因此在這一步也需要將衣服與調整後的前景大小一同調整。人物在照片中，不一定是全身入鏡，有可能只照半身，也可能是被障礙物遮擋，因此在這一步驟中，也需要將衣服依據人物在鏡頭中出現的比例貼合，避免衣服超出人物形成異常畫面。</p>
+			<p align="justify">　　多人的部分，為了避免遮擋，因此在<a href="#重疊判斷" class=class_content>4.1</a>節進行了重疊判斷，在此節，依據<a href="#重疊判斷" class=class_content>4.1</a>節的重疊判斷，對每一個人次依序進行前景合成與衣服合成，前景合成與衣服合成皆完成後，才對下一人次進行合成，如此就可避免衣服遮蓋住人物。</p>
+			<br>
+			<h3 id="呈現結果">
+              <b>5.呈現結果</b>
+			</h3>
+			<br>
+			<p align="justify">　　本研究結合GrabCut的前後景分離技術以及YOLO篩選人體的技術，在前後景分離方面，達到了速度快，效果佳的成果，同時，利用OpenPose定位人體關節資訊，成功轉換微側身與站姿不同所造成的偏差。在多人方面，本研究也成功利用4.1節的重疊判斷交換圖層相疊順序，成功區分出前後人物，並成功套上衣服。</p>
+			<p align="justify">　　以下圖8為本研究之單人成果，圖7(左)為原圖，具有簡單背景；圖7(中)是經過前後景分離後的前景結合使用者選擇之新背景，可以看出經過YOLO初步製作mask不僅僅在時間上取得優勢，在分離上也能取得不錯的結果；圖7(右)則是將處理過後的衣服加入新背景中，呈現最後結果。</p>
+			<p align="center"><img src="images/report/1041702/單人成果.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 7 (左)單人原圖<a href="#r15" class=class_content>[15]</a>，(中)前景結合新背景，(右)加入衣服，背景<a href="#r20" class=class_content>[20]</a></p>
+			<p align="justify">　　圖8為本研究之多人成果，圖8(左)為原圖，具有複雜背景;圖8(右)為加入衣服後結果，可以看出分離後的成果不錯，但在衣服疊圖部分，因為偵測到左邊人物右肩跟右邊人物左肩座標上下重疊了，同時左邊人物偵測關節只偵測到肩膀部分，因此依據4.1節的重疊判斷，用肩膀決定他們的上下順序，因此呈現左邊人物在前的畫面。</p>
+			<p align="center"><img src="images/report/1041702/多人成果.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 8 (左)多人原圖<a href="#r15" class=class_content>[15]</a>，(右)加入衣服</p>
+			<br>
+			<h3 id="結論與未來方向">
+              <b>6.結論與未來方向</b>
+			</h3>
+			<br>
+			<p align="justify">　　在前後景分離的部分，結合了GrabCut與YOLO節省時間的效果相當明顯，尤其人物比例佔圖片越小，YOLO所起到的功效越大。</p>
+			<p align="justify">　　而在衣服做透視變換的部分，對於轉身角度越大效果越不明顯，細思原因應是缺乏光源變化導致變形卻看不出深度。</p>
+			<p align="justify">　　單人實現本研究所有功能的部分已能達到相當不錯的成果，惟多人在前後景分離的部分以及關節點判斷的部分都達不到較好的成果，以致於最後合成成果不佳</p>
+			<p align="justify">　　未來嘗試利用Poisson image editing<a href="#r21" class=class_content>[21]</a>去模擬原有衣服的風格，依據論文所提，該方法會去計算合成位置的梯度及散度，模擬合成位置的變化，因此能讓合成圖片看起來更真實。利用此方法，或許能避免計算光源折射、反射角度所造成耗時長的問題，同時使衣服也能具有陰影變化，看起來更有真實感。</p>
+			<p align="justify">　　多人呈現不佳則暫時沒有好的解決方式，因多人在前後景分離時，會被距離過近的人影響，造成部分部位消失，或是多出部分背景。</p>
+			<br>
+			<hr />
           </article>
-          <article id="實習進度">
+          <article id="學習">
             <p class="lead">
-              <h3>
-                <b>實習進度</b>
-              </h3>
+              <h2>
+                <b>學習</b>
+              </h2>
             </p>
-            <p>
-              <b>衣服位置修正</b>
-            </p>
-
-            <p>此虛擬試衣間系統，能根據鏡頭前人物位置，實時運算，將衣物投影在人體身上，但原先衣物在畫面中會有位置偏離、角度錯誤等問題。</p>
-            <p>示例：</p>
-            <img src="images/report/1041702/Revise1.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>現在已經修正此問題</p>
-            <p>示例：</p>
-            <img src="images/report/1041702/Revise2.png" alt="Image placeholder" class="img-fluid mb-4">
-
-
-            <p>
-              <b>去除背景、更換背景</b>
-            </p>
-
-            <p>雖然，能更換衣物已經能引起使用者的興趣，但有時背景也會影響使用者在使用上的興致，因此既然做到了更換衣物，何不讓使用者也能挑選自己喜歡的背景進行搭配，因此誕生了這功能。</p>
-            <p>示例：</p>
-            <img src="images/report/1041702/background.png" alt="Image placeholder" class="img-fluid mb-4">
-
-
-            <p>
-              <b>2D照片人物辨識</b>
-            </p>
-
-            <p>雖然AR已經能非常好的捕捉人物位置進行自動更換了，但礙於設備限制，並不是人人隨時隨地可用，因此誕生了使用2D照片也能完成虛擬試衣間功能的想法。但要做到2D照片自動更換衣物並非一蹴可幾的事，因此我循序漸進，先找出2D照片辨識人物的方法。</p>
-            <p>成果如下：</p>
-            <img src="images/report/1041702/Recognition.png" alt="Image placeholder" class="img-fluid mb-4">
-
-
-            <p>
-              <b>2D照片半自動去背</b>
-            </p>
-
-            <p>找出人物後首先要做的自然就是去背了，因為去背涉及的概念跟顏色邊緣等有關係，要是先換上衣物，有可能發生衣物一起被切除的問題，因此我先找出去背的方式，之後再考慮衣物的自動對位。但全自動做到切除背景實在是困難，有太多的干擾因素，如顏色相近，邊緣不明顯，或是雜訊太多等等，因此我採用半自動的方法先標註較難判斷的位置，再讓他自動演算。</p>
-            <p>成果如下：</p>
-            <img src="images/report/1041702/Recognition.png" alt="Image placeholder" class="img-fluid mb-4">
-
-
-            <p>
-              <b>Alpha Matting取透明物件</b>
-            </p>
-
-            <p>前面所使用的2D照片半自動去背的技術，對於提取透明物體來說，有著極大的困難。原因為前面所提及之技術所使用的是threshold(二值化閥值)，所取的就是非0(白)即1(黑)，雖然簡單快速，但因為需要像素變化劇烈，因此效果不佳。為了分離複雜或是細緻的前景，如毛髮、半透明物體，我便採用了Alpha
-              Matting的技術。Alpha Matting所使用的是所謂的Trimap，即所謂的三元圖，使用黑色確定背景，白色確定前景，灰色則為不確定因素，用來判斷較為細緻的部分。</p>
-            <p>原圖：</p>
-            <img src="images/report/1041702/Alpha1.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>Trimap：</p>
-            <img src="images/report/1041702/Alpha2.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>Alpha圖：</p>
-            <img src="images/report/1041702/Alpha3.png" alt="Image placeholder" class="img-fluid mb-4">
-            <p>提取結果：</p>
-            <img src="images/report/1041702/Alpha4.png" alt="Image placeholder" class="img-fluid mb-4">
-
-
-            <div class="pt-5">
-              <p>Categories:
-                <a href="#實習進度">實習進度</a> Tags:
-                <a href="#">#位置修正</a>,
-                <a href="#">#背景</a>,
-                <a href="#">#辨識</a>,
-                <a href="#">#去背</a>,
-                <a href="#">#YOLO</a>
-                <a id="share_up" href="#" title="回頂端" alt="回頂端">
-                  <img src="images/report/1041702/return.png" class="img-fluid mb-4">
-                </a>
-              </p>
-            </div>
-            <hr />
+            <br>
+			<h3 id="繪圖座標系">
+              <b>1.繪圖座標系</b>
+			</h3>
+			<br>
+			<p align="justify">　　數學上，我們慣用的座標系是笛卡兒直角座標系，是以Y軸向上，X軸向右延伸取得正數。但在繪圖座標系中，Y軸的正向向下，X軸正向向右，如圖9所示，因此原點在左上角位置，使用上會有不習慣，因此建議開發者寫成函式自動轉換。</p>
+			<p align="center"><img src="images/report/1041702/座標系示意圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 9 繪圖座標系示意圖</p>
+            <p align="justify">　　多數繪圖座標系統都使用像素為基本座標單位，因此若有對圖片調整大小導致換算向素非整數時，需要利用雙線性插值或是雙立方插值<a href="#r22" class=class_content>[22]</a>進行處理，避免圖片產生鋸齒狀邊緣。</p>
+			<br>
+			<h3 id="前後景分離3">
+              <b>2.前後景分離</b>
+			</h3>
+			<br>
+			<p align="justify">　　要做到前後景分離，首先就得區分出前景。利用人眼與過去的經驗判斷，我們可以立即看出一張照片裡的前景位在何處，但對於計算機視覺來說，照片中的每個物件都只是整張照片像素點集合的一部分，因此要區分出一項物件並非一件容易的事。</p>
+			<p align="justify">　　為了計算出前景位置，我們首先得對整張圖像進行梯度的計算，利用梯度向量取得圖片顏色變化，接著計算利用梯度計算散度，以散度的純量得知該點為匯聚點或發源點，藉由此兩項要素去判斷物件位置。</p>
+			<p align="justify">　　實現前後景分離的方式有很多，但我選擇GrabCut，原因為其他方式耗時過久，或是實現效果不佳，權衡之下，GrabCut有相對較好的效率。GrabCut的實現方式如第貳部分<a href="#前後景分離2" class=class_content>2.2</a>節所說，經過我實驗後，在前背景顏色相近或是前景細節多的圖片上，實現效果不佳，但對於背景單純前景簡單的圖片上效果極佳。</p>
+			<br>
+			<h3 id="人體檢測3">
+              <b>3.人體檢測</b>
+			</h3>
+			<br>
+			<p align="justify">　　我做的研究是試衣間研究，不可避免的，必須將人體從影像中提取出來。前面第<a href="#前後景分離3" class=class_content>2</a>節提到了計算機視覺在影像上的判斷，我們難以用常規的方法去將人體範圍圈選出來，因此我利用了號稱時下最快的影像機器學習框架YOLO將人體範圍圈選出來。</p>
+			<p align="justify">　　YOLO實現方式如第貳部分<a href="#人體檢測" class=class_content>2.3</a>節所說，平均精度均值達到55.3，可以說在速度與精度上都取得了很好的成果。經過試驗，YOLO很好的避免了將樹或路燈等物件誤認為人，但在小目標的檢測上，效果仍有待加強，圖10是檢測人體範例圖。</p>
+			<p align="center"><img src="images/report/1041702/人體檢測圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 10 檢測人體範例圖，原圖<a href="#r15" class=class_content>[15]</a></p>
+            <br>
+			<h3 id="關節點定位3">
+              <b>4.關節點定位</b>
+			</h3>
+			<br>
+			<p align="justify">　　對於我做的試衣間研究來說，光做到提取人體影像是不夠的，YOLO可以定位出人體大致範圍，但提取出的位置並不固定，無法利用人體範圍推算出衣服配對位置。因此需要關節點的定位。在第貳部分2.4節提到的OpenPose就是關節點檢測很好的一個框架。經過試驗，OpenPose即便面對被遮擋的目標，也可以很好的預測出關節點位置，但容易將路燈或是樹木誤判成人。</p>
+			<p align="justify">　　圖11(左)是我利用OpenPose論文所實現的關節點檢測，圖11(右)是我結合YOLO檢測與OpenPose關節點檢測去尋找其中一個人的結果。
+			<p align="center"><img src="images/report/1041702/關節檢測圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 11 (左)關節點檢測，(右)YOLO+關節點檢測，原圖<a href="#r15" class=class_content>[15]</a></p>
+			<br>
+			<h3 id="匈牙利算法">
+              <b>5.匈牙利算法</b>
+			</h3>
+			<br>
+			<p align="justify">　　YOLO能找出人物位置，OpenPose能找出關節點定位，但兩者找出的人物順序是不同的，人數也不一定相同，因此會產生二分匹配的問題，就需要用到匈牙利算法來解決。</p>
+			<p align="justify">　　首先，我們先來了解何謂二分匹配，凡是一個集合中的某個數字需要對應到另一個集合中的某個數字，且不可重複，同時同個集合內的數字相互獨立，就能稱作二分匹配。匈牙利算法主要規則為在路徑上建立權重，同時在兩端點建立變數權重，兩端點變數權重總和要大於等於路徑上的權重，若遇到要調整權重，則在端點上進行調整，減少調整權重的時間。<p>
+			<p align="justify">　　圖12(上)是匈牙利算法流程範例，舉4個人物YOLO與OpenPose的配對。灰色圓圈代表YOLO，白色圓圈代表OpenPose。首先在Step1可以看到未配對前的藍色路徑權重，權重取法為YOLO中央與OpenPose脊柱中心的歐幾里得距離，路徑的權重不會改變，YOLO初始權重則為該點的最大路徑權重，而OpenPose初始權重則一律為0。Step2、Step3都是尋找路徑最大權重作為最佳匹配路徑，橘色路徑是他們的最佳匹配路徑。而在Step3到Step4可以看到出現了路徑衝突的問題，YOLO的2、3兩點都想連接到OpenPose的第2點，解決方法如圖12(下)，可以看到YOLO第2點的最佳路徑與次佳路徑權重差距比YOLO第3點的大，因此替換YOLO第2點的路徑匹配。Step3.1實線代表目前連線，虛線代表其他可走路徑，呈現出YOLO第2、3點所有的路徑圖。Step3.2可以看出，因為路徑權重不可變，為了將YOLO第2點改配對到OpenPose第4點，需要將YOLO第2點的權重改變，由於兩端權重和必須大於路徑權重，因此OpenPose第2點與YOLO第3點權重也需依序調整。Step3.3可以看到改變完成的權重與路徑。Step5由於已經沒有其他路徑衝突，因此可以直接連接，完成最佳匹配。</p>
+			<p align="center"><img src="images/report/1041702/匈牙利算法.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 12 (上)匈牙利算法流程範例，(下)路徑衝突解決範例</p>
+			<br>
+			<h3 id="透視變換">
+              <b>6.透視變換</b>
+			</h3>
+			<br>
+			<p align="justify">　　因為照片是3D投影到2D上的結果，要使得衣服的紋理能對到照片上的人物，就需要做透視變換的處理。談到透視變換，首先就要從鏡頭的成像開始說起，圖13是鏡頭成像圖，可以看出距離鏡頭越遠的成像越小，距離鏡頭越近的成像越大。</p>
+			<p align="center"><img src="images/report/1041702/鏡頭成像圖.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 13 鏡頭成像圖</p>
+			<p align="justify">　　了解鏡頭成像後，需要了解三維圖像渲染到二維平面上的方法。圖14是透視投影的模型圖，基本上由視點E也就是觀察者的角度與視平面構成。可以看出三維圖像任一點的射線經過視點E都有對應投影座標，通常會限定距離形成一近平面與一遠平面，形成一類似棱錐體構造，近平面與遠平面間視為可視區間，形成的棱錐體也被稱為視錐體，是計算機圖形常用模型。</p>
+			<p align="center"><img src="images/report/1041702/透視投影模型.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 14 透視投影模型圖</p>
+			<p align="justify">　　有了透視投影的概念後，接下來分析透視變換的公式式(1)：</p>
+			<p align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=[{x}',{y}',{w}']=[u,v,w]\begin{bmatrix}&space;a_{11}&space;&a_{12}&space;&a_{13}&space;\\&space;a_{21}&space;&a_{22}&space;&a_{23}&space;\\&space;a_{31}&space;&a_{32}&space;&&space;a_{33}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?[{x}',{y}',{w}']=[u,v,w]\begin{bmatrix}&space;a_{11}&space;&a_{12}&space;&a_{13}&space;\\&space;a_{21}&space;&a_{22}&space;&a_{23}&space;\\&space;a_{31}&space;&a_{32}&space;&&space;a_{33}&space;\end{bmatrix}" title="[{x}',{y}',{w}']=[u,v,w]\begin{bmatrix} a_{11} &a_{12} &a_{13} \\ a_{21} &a_{22} &a_{23} \\ a_{31} &a_{32} & a_{33} \end{bmatrix}" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)</p>
+			<p align="justify"><a href="https://www.codecogs.com/eqnedit.php?latex=u" target="_blank"><img src="https://latex.codecogs.com/gif.latex?u" title="u" /></a>、<a href="https://www.codecogs.com/eqnedit.php?latex=v" target="_blank"><img src="https://latex.codecogs.com/gif.latex?v" title="v" /></a>是原始圖片座標，<a href="https://www.codecogs.com/eqnedit.php?latex=x^{'}=x\times&space;w^{'},y^{'}=y\times&space;w^{'}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x^{'}=x\times&space;w^{'},y^{'}=y\times&space;w^{'}" title="x^{'}=x\times w^{'},y^{'}=y\times w^{'}" /></a>，<a href="https://www.codecogs.com/eqnedit.php?latex=x" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x" title="x" /></a>、<a href="https://www.codecogs.com/eqnedit.php?latex=y" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y" title="y" /></a>是轉換後圖片座標，而<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;a_{11}&space;&a_{12}&space;\\&space;a_{21}&space;&&space;a_{22}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;a_{11}&space;&a_{12}&space;\\&space;a_{21}&space;&&space;a_{22}&space;\end{bmatrix}" title="\begin{bmatrix} a_{11} &a_{12} \\ a_{21} & a_{22} \end{bmatrix}" /></a>部分用來表示線性變換，<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;a_{13}\\&space;a_{23}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;a_{13}\\&space;a_{23}&space;\end{bmatrix}" title="\begin{bmatrix} a_{13}\\ a_{23} \end{bmatrix}" /></a>產生透視變換，<a href="https://www.codecogs.com/eqnedit.php?latex=\begin{bmatrix}&space;a_{31}&space;&&space;a_{32}&space;\end{bmatrix}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\begin{bmatrix}&space;a_{31}&space;&&space;a_{32}&space;\end{bmatrix}" title="\begin{bmatrix} a_{31} & a_{32} \end{bmatrix}" /></a>用作平移，可得轉換後圖片座標公式式(2)：</p>
+			<p align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=x=\frac{{x}'}{{w}'}=\frac{a_{11}u&plus;a_{21}v&plus;a_{31}}{a_{13}u&plus;a_{23}v&plus;a_{33}},y=\frac{{y}'}{{w}'}=\frac{a_{12}u&plus;a_{22}v&plus;a_{32}}{a_{13}u&plus;a_{23}v&plus;a_{33}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x=\frac{{x}'}{{w}'}=\frac{a_{11}u&plus;a_{21}v&plus;a_{31}}{a_{13}u&plus;a_{23}v&plus;a_{33}},y=\frac{{y}'}{{w}'}=\frac{a_{12}u&plus;a_{22}v&plus;a_{32}}{a_{13}u&plus;a_{23}v&plus;a_{33}}" title="x=\frac{{x}'}{{w}'}=\frac{a_{11}u+a_{21}v+a_{31}}{a_{13}u+a_{23}v+a_{33}},y=\frac{{y}'}{{w}'}=\frac{a_{12}u+a_{22}v+a_{32}}{a_{13}u+a_{23}v+a_{33}}" /></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)</p>
+			<p align="justify">代入程式內即可求得透視變換圖形，轉換過程可能有小數點，須以雙線性插值或雙立方插值進行處理。</p>
+			<br>
+			<hr />
           </article>
-          <p id="工作角色" class="lead">
-            <h3>
-              <b>工作角色</b>
-            </h3>
-          </p>
-          <p>修正之前交接程式的BUG、針對交接下來的程式提出更多相關的研究與創新</p>
-
-          <div class="pt-5">
-            <p>Categories:
-              <a href="#工作角色">工作角色</a> Tags:
-              <a href="#">#修正</a>,
-              <a href="#">#研究</a>,
-              <a href="#">#創新</a>
-              <a id="share_up" href="#" title="回頂端" alt="回頂端">
-                <img src="images/report/1041702/return.png" class="img-fluid mb-4">
-              </a>
-            </p>
-          </div>
-          <hr />
-          <p id="學習" class="lead">
-            <h3>
-              <b>學習</b>
-            </h3>
-          </p>
-          <p>修正之前交接程式的BUG、針對交接下來的程式提出更多相關的研究與創新</p>
-
-          <div class="pt-5">
-            <p>Categories:
-              <a href="#學習">學習</a> Tags:
-              <a href="#">#投影</a>,
-              <a href="#">#去背</a>,
-              <a href="#">#辨識</a>,
-              <a href="#">#Alpha Matting</a>
-              <a id="share_up" href="#" title="回頂端" alt="回頂端">
-                <img src="images/report/1041702/return.png" class="img-fluid mb-4">
-              </a>
-            </p>
-          </div>
-          <hr />
+          
           <p id="自我評估及心得感想" class="lead">
-            <h3>
+            <h2>
               <b>自我評估及心得感想</b>
-            </h3>
+            </h2>
           </p>
-          <p>　　學而不思則罔，思而不學則殆，對於實習工作，正是最佳寫照。
-            <增廣賢文>有句名言，「學如逆水行舟，不進則退」，在資訊界尤是如此。在中研院兩個多月以來，我充分體會何為坐井觀天，許許多多看似嶄新的理念，在半世紀以前就已經有人提出，並展現他們的實驗方法。這段經歷，使我想起一句諺語，「學海無涯，唯勤是岸」，只有勤奮的學習，才有機會在暗潮洶湧的現代社會中脫穎而出。</p>
-          <p>　　日新月異的現代，有一門技能，木秀於林，掌握在手，便可事半功倍。它，不是強大的外文能力，也不是優秀的數理邏輯，而是查詢資料的能力。或許你對於查詢資料的重要性抱持著疑惑，現代人人都會上網，只要在GOOGLE搜尋關鍵字，不是就能輕鬆地找出資料了嗎?答案是否定的。假設單純的輸入自己的問題，有時候卻沒辦法找出想要的答案，因為GOOGLE會根據它自己的判斷，將搜尋結果一一排列出來，內容或多或少都有你輸入進去的關鍵字，但找出的答案卻雜亂無章，難以解決問題。為了解決自己的問題，就需要在關鍵字上字斟句酌，假如你想要找出自動化去背的方法，你不應該打自動化去背這個關鍵字，這只會幫你找出如何用photoshop解決去背的問題，而是應該思考去背的關鍵在哪裡，像是AI、algorithm、opencv、slic等等，找出有關聯的關鍵字，而非直接輸入問題，如此才能找出正確的資料，這也是我在搜尋資料中總結出的心得。</p>
-          <p>　　問題總是層出不窮，千奇百怪，有時候網路上並不一定有契合你問題的解答。思考，便是解決問題唯一的途徑。周敦頣曾經說過，「思則睿，睿作聖」，便是告訴我們時時刻刻保持思考才有機會成就聖人。我在DEBUG的時候，充分體會了這道理。許許多多瑣碎的小問題，總是互相影響，就像一座鐘，裡面的每一顆螺絲，都是它保持運作的關鍵。在空間上的運作尤是如此，多維的空間總是會被一個小小的改變，而造成大大的影響，我計算三維空間四元數時，總是得記清楚向量方向及角度的關係，且還需要考慮物體視角與攝影機視角的相對問題，並不僅僅是加個負號就能解決，而是需要經過複雜的矩陣運算，最終才能得出正確的解答。且三維空間還有左手坐標系及右手坐標系的不同需要考慮，總是牽一髮而動全身，實在讓人心力交瘁。</p>
-          <p>　　在這中研院的兩個多月以來，我學習到的程式比過去三年還要紮實，不僅僅像是上課時只使用單一的程式語言，我在這結合了多種程式語言的學習與改寫，並且對於影像處理有著更深刻的見解。雖然問題不斷的奔襲而來，但我願以嘗試作筆，化失敗為墨，揮灑出磅礡豐富的人生。</p>
-
-          <div class="pt-5">
-            <p>Categories:
-              <a href="#自我評估及心得感想">自我評估及心得感想</a> Tags:
-              <a href="#">#心得</a>,
-              <a href="#">#關鍵字</a>
-              <a id="share_up" href="#" title="回頂端" alt="回頂端">
-                <img src="images/report/1041702/return.png" class="img-fluid mb-4">
-              </a>
-            </p>
-          </div>
-          <hr />
+		  <br>
+          <p align="justify">　　「吾生也有涯，而知也無涯。」學習這條路上，你看不到盡頭，就如街道巷弄，從一條小巷竄出，卻發現自己進入一條大街，只要持續走下去，就不會有停止的一天。《禮記．學記》：「學然後知不足」，在中研院實習至今已達六個月之久，從對影像的懵懂無知，到現在已能對影像做多種變換，一步一步走來深深感受所學不足，即便到了現在，仍在三維重建的問題上力有未逮，但上天不負苦心人，暑期實習我仍產出了一點小成果。</p>
+          <p align="justify">　　暑期實習我完成的進度並不多，最大的收穫就是完成一篇論文。撰寫一篇論文最重要的就是發揮實事求是的精神，我在撰寫論文的過程，學到了論文的來龍去脈、前後呼應，也體悟了考證的重要性，《論語．為政篇》：「知之為知之，不知為不知，是知也。」正是最佳寫照。</p>
+          <p align="justify">　　撰寫論文有很多要點需要我注意，首先就是自己論文的框架，定好自己論文闡述的大方向，然後搜尋相關論文，接著描述清楚自己的實驗環境與方法，之後詳細記錄自己實驗數據與前面引用過的論文相互比對，最後下結論，才定下自己的摘要與題目。這幾步，看似容易，卻有許多難處。舉例來說，若是寫系統相關論文，自己的功能架構與前方論文順序需要相互映證，功能架構又要與後方實驗順序相互輝映，在同一部分當中，前方順序與後方順序也需要有其中的關聯性；此外，圖片大小與放置位置也是需要注意的地方，要先提到圖片並描述，然後才放上圖片，且圖片與提及圖片之內文需在同一頁面當中，表格也是相同處理。</p>
+          <p align="justify">　　但論文也有其簡單但重要的地方，就是引用。引用有所謂引用的格式，照著格式在對應的地方加上引用就能完成，任何搜尋來的資源都應加上其來源，但往往在這一步很多人都不會注意，在網路上隨便找張圖片就貼上來使用。而正確的做法是，圖表盡可能的自製，即便用到他人的圖片，也需附上完整來源，且按照格式與順序引用，若有論文以論文引用，沒有論文才引用其網址。</p>
+		  <p align="justify">　　無論是框架設定或是引用技巧，論文帶給我的幫助著實不小。孔子曾言：「生而知之者，上也；學而知之者，次也；困而學之，又其次也；困而不學，民斯為下矣。」我非生而知之者，因此向學，「書山有路勤為徑，學海無涯苦作舟」，惟有勤奮，才能使我們走的更遠，站的更高。</p>
+          <br>
+		  <hr />
           <p id="對系上的建議" class="lead">
-            <h3>
+            <h2>
               <b>對系上的建議</b>
-            </h3>
+            </h2>
           </p>
-          <p>在對學弟妹介紹時，不將重點擺在成果上，而是將重點擺在實習生活與上課究竟有何不同。畢竟沒有真正體會過，沒有辦法想像成果的背後隱藏了多少的困難，但將過程與學校生活一一比對，卻能更好的比較出兩者間的優劣，對於日後選擇繼續升學而留校內實習或是體驗校外實習生活，有著較有份量的幫助。</p>
-
-          <div class="pt-5">
-            <p>Categories:
-              <a href="#對系上的建議">對系上的建議</a> Tags:
-              <a href="#">#建議</a>,
-              <a href="#">#資管系</a>,
-              <a href="#">#1062</a>
-              <a id="share_up" href="#" title="回頂端" alt="回頂端">
-                <img src="images/report/1041702/return.png" class="img-fluid mb-4">
-              </a>
-            </p>
-          </div>
-
-
+		  <br>
+          <p align="justify">　　系上課程很少應用開源軟體，像是開源作業系統ubuntu，或是開源影像處理函式庫Opencv，又或者是開源的機器學習框架tensorflow、keras，都沒有介紹及使用。實習的公司不一定都是使用有版權的軟體，反而開源軟體應用較多，因此建議系上能多開類似課程。此外，現在的機器學習大部分都建構在GPU上，但系上似乎沒有對應課程，因此建議系上加開GPU研究應用。</p>
+		  <br>
+		  <p id="參考文獻" class="lead">
+            <h2>
+              <b>參考文獻</b>
+            </h2>
+          </p>
+		  <br>
+		  <h6><font size="2.5">
+		  <p id="r1" align="justify">[1]N.C.Chen，” The Study of Consumers’ Needs to Shopping Services of Original Internet Apparel Store”, Taipei: Master's thesis, Department of Graphic Communication, National Taiwan Normal University, pp.1-179, 2011</p>
+		  <p id="r2" align="justify">[2]D. Protopsaltou, C. Luible, M. Arevalo, and N. Magnenat-Thalmann, “A body and Garment Creation Method for an Internet Based Virtual Fitting Room”,in J. Vince, and R.Earnshaw, Eds ,Advances in Modelling, Animation and Rendering. Springer, London, pp. 105-122, 2002</p>
+		  <p id="r3" align="justify">[3]Y.Y. Chen, “A Study and Development of an Online Two-dimensional Virtual Fitting Room”, Kaohsiung: Master's thesis, Science in Information Technology and Management, Shih Chien University, unpublished</p>
+		  <p id="r4" align="justify">[4]S.W.Curry, and L.A.Sosa, U. S. Patent No. US9773274B2 (26 September, 2017)</p>
+		  <p id="r5" align="justify">[5]J. Leong, R. Parkinson, E. Lin, C. Ayala, D.Y. Kim, S. Hewing, and V. Chen,”Your Virtual Dressing Room: Try Clothes Online”,On Web.URL: https://www.style.me/</p>
+		  <p id="r6" align="justify">[6]C. Rother, V. Kolmogorov, and A. Blake, “"GrabCut": interactive foreground extraction using iterated graph cuts”, ACM Transactions on Graphics (TOG) , vol. 23, Issue 3, pp. 309-314, August 2004</p>
+		  <p id="r7" align="justify">[7]V. Kwatra, A. Schödl, I. Essa, G. Turk, and A. Bobick, “Graphcut textures: image and video synthesis using graph cuts”, ACM Transactions on Graphics (TOG) , vol. 22, Issue 3, pp. 277-286, July 2003</p>
+		  <p id="r8" align="justify">[8]C. Rother, V. Kolmogorov, and A. Blake, Microsoft Technology Licensing LLC, U. S. Patent No. US7430339B2 (30 September, 2008)</p>
+		  <p id="r9" align="justify">[9]R. Joseph, and F. Ali, “YOLOv3:An Incremental Improvement”, arxiv , unpublished </p>
+		  <p id="r10" align="justify">[10]S.E. Wei, V. Ramakrishna, T. Kanade, and Y. Sheikh, “Convolutional pose machines” , CVPR, 2016</p>
+		  <p id="r11" align="justify">[11]Z. Cao, T. Simon, S.E. Wei, and Y. Sheikh,”Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields”, CVPR, 2017</p>
+		  <p id="r12" align="justify">[12]Intel Corporation, W. Garage, Itseez, ”Open Source Computer Vision”, On Web. URL:https:/opencv.org/</p>
+		  <p id="r13" align="justify">[13]S.Ouyang, and D.E.Maynard,” Phong shading by binary interpolation”, Computers & Graphics, vol20, Issue 6, pp.839-848, 1996</p>
+		  <p id="r14" align="justify">[14]S.T. Barnard,, "Interpreting perspective images", Artificial Intelligence, vol. 21, pp. 435-462, 1983.</p>
+		  <p id="r15" align="justify">[15]A. Opelt and A. Pinz. Graz 01 data set. On Web, 2004. URL:http://www.emt.tugraz.at/ ∼ pinz/data/GRAZ01/.</p>
+		  <p id="r16" align="justify">[16]T.Y. Lin, M. Maire, S. Belongie, J. Hays, P. Perona, D. Ramanan,P. Dollár, and C. Lawrence Zitnick,” Microsoft COCO: Common Objects in Context”, ECCV, vol.8693, pp. 740-755, 2014</p>
+		  <p id="r17" align="justify">[17]N. Fujisawa, T. Masud, H. Inaoka, Y. Fukuoka, A. Ishida, and H. Minamitani, “Human standing posture control system depending on adopted strategies”, Medical and Biological Engineering and Computing, vol.43, Issue 1, pp.107-114, 2005</p>
+		  <p id="r18" align="justify">[18]芭伊工坊, “芭伊工坊”, On Web. URL:https:/bayigroup.weebly.com/index.html</p>
+		  <p id="r19" align="justify">[19]吉貝耍工作室, ”吉貝耍部落資訊網 | 部落e樂園”, On Web. URL: http://www.e-tribe.org.tw/kabuasua/</p>
+		  <p id="r20" align="justify">[20]N. Dalal, "INRIA person dataset", On Web, 2005. URL:http://pascal.inrialpes.fr/data/human/</p>
+		  <p id="r21" align="justify">[21]P. Pérez, M. Gangnet, and A. Blake, “Poisson image editing”, ACM Transactions on Graphics (TOG) , vol. 22 Issue 3, pp. 313-318, July 2003</p>
+		  <p id="r22" align="justify">[22]R. Keys, “Cubic convolution interpolation for digital image processing”, IEEE Transactions on Acoustics, Speech, and Signal Processing, vol.29, Issue 6, pp.1153-1160, December 1981</p>
+		  </font>
+		  </h6>
         </div>
-        <div class="col-md-4 sidebar">
-          <div class="sidebar-box">
+		</div>
 
 
+		
+		<div class="col-md-4 sidebar">
             <div class="sidebar-box">
-              <img src="images/report/1041702/me.png" alt="Image placeholder" class="img-fluid mb-4">
-              <h3>About The Author</h3>
-              <p>元智大學資管系三年級學生</p>
-              <p>擅長程式語言：C++</p>
-              <p>技能：C、C++、C#、Python、Verilog、MSSQL、MYSQL、PHP、WPF</p>
-              <!-- <p><a href="#" class="btn btn-primary btn-sm">Read More</a></p> -->
-            </div>
+				<div id="contants">
+					<span id="contants-l" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+				</div>
+			</div>
+		</div>
+		
 
-            <div class="sidebar-box">
-              <h3>Contact</h3>
-              <p>電子信箱：s1041702@g.yzu.edu.tw</p>
-            </div>
+<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<nav class="col-sm-3 col-4" id="myScrollspy">
+<ul class="nav nav-pills flex-column">
+	<li class="nav-item"> <a href="#工作內容" class="nav-link active">工作內容</a>
+		<ul>
+		    <li class="nav-item"><a href="#前言" class="nav-link">1.前言</a></li>
+			<li class="nav-item dropdown"><a href="#文獻探討" class="nav-link dropdown-toggle" data-toggle="dropdown">2.文獻探討</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#虛擬試衣間相關研究">2.1虛擬試衣間相關研究</a>
+					<a class="dropdown-item" href="#前後景分離" >2.2前後景分離</a>
+					<a class="dropdown-item" href="#人體檢測" >2.3人體檢測</a>
+					<a class="dropdown-item" href="#關節點檢測" >2.4關節點檢測</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown"><a href="#研究方法" class="nav-link dropdown-toggle" data-toggle="dropdown">3.研究方法</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#研究限制">3.1研究限制</a>
+					<a class="dropdown-item" href="#使用環境">3.2使用環境</a>
+					<a class="dropdown-item" href="#功能架構">3.3功能架構</a>
+				</div>
+			</li>
+			<li class="nav-item dropdown"><a href="#實驗過程" class="nav-link dropdown-toggle" data-toggle="dropdown">4.實驗過程</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="#重疊判斷">4.1重疊判斷</a>
+					<a class="dropdown-item" href="#前後景分離2">4.2前後景分離</a>
+					<a class="dropdown-item" href="#衣服變形處理">4.3衣服變形處理</a>
+					<a class="dropdown-item" href="#合成">4.4合成</a>
+				</div>
+			</li>
+			<li class="nav-item"><a href="#呈現結果" class="nav-link">5.呈現結果</a></li>
+			<li class="nav-item"><a href="#結論與未來方向" class="nav-link">6.結論與未來方向</a></li>
+		</ul>
+	</li>
+	<li class="nav-item"> <a  href="#學習" class="nav-link">學習</a>
+		<ul>
+			<li class="nav-item"><a href="#繪圖座標系" class="nav-link">1.繪圖座標系</a></li>
+			<li class="nav-item"><a href="#前後景分離3" class="nav-link">2.前後景分離</a></li>
+			<li class="nav-item"><a href="#人體檢測3" class="nav-link">3.人體檢測</a></li>
+			<li class="nav-item"><a href="#關節點定位3" class="nav-link">4.關節點定位</a></li>
+			<li class="nav-item"><a href="#匈牙利算法" class="nav-link">5.匈牙利算法</a></li>
+			<li class="nav-item"><a href="#透視變換" class="nav-link">6.透視變換</a></li>
+		</ul>
+	</li>
+	<li class="nav-item"> <a href="#自我評估及心得感想" class="nav-link">自我評估及心得感想</a></li>
+					    
 
-            <div id="contants">
-              <span id="contants-l">目錄</span>
-              <li>
-                <a href="#工作詳述">工作詳述
-                  <span>(6)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#實習進度">實習進度
-                  <span>(5)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#工作角色">工作角色
-                  <span>(1)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#學習">學習
-                  <span>(5)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#自我評估及心得感想">自我評估及心得感想
-                  <span>(1)</span>
-                </a>
-              </li>
-              <li>
-                <a href="#對系上的建議">對系上的建議
-                  <span>(1)</span>
-                </a>
-              </li>
-            </div>
-
-          </div>
-        </div>
-      </div>
+	<li class="nav-item"> <a href="#對系上的建議" class="nav-link">對系上的建議</a></li>
+					
+	<li class="nav-item"> <a href="#參考文獻" class="nav-link">參考文獻</a></li>					
+</ul>
+</nav>		
+</div>
+		</div>
   </section>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "350px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+		
+
+
   <hr id="hri">
   <div class="col-md-12 row justify-content-center align-items-center intro" style="height: 40vh;margin-top: 0;">
     <div class="col-md-7 text-center element-animate">
