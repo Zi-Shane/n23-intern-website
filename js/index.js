@@ -23,12 +23,12 @@ $('#btn-1041621').hover(() => {
     $('#intro-work').text(orig_text);
 })
 $('#btn-1041702').hover(() => {
-    $('#intro-work').text("虛擬試衣間");
+    $('#intro-work').text("基於單張影像之虛擬試衣間研究");
 }, () => {
     $('#intro-work').text(orig_text);
 })
 $('#btn-1041713').hover(() => {
-    $('#intro-work').text("文字探勘-文本比對");
+    $('#intro-work').text("文字探勘-文本比對 & Kubernetes研究");
 }, () => {
     $('#intro-work').text(orig_text);
 })

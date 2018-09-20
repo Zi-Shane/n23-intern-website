@@ -28,8 +28,8 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-light">
       <div class="container">
         <a class="navbar-brand absolute" href="index.htm">N23 Internship</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05"
-          aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -39,7 +39,8 @@
               <a href="index.htm" class="nav-link">首頁</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">其他人的網頁</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">其他人的網頁</a>
               <div class="dropdown-menu" aria-labelledby="dropdown05">
                 <a class="dropdown-item" href="1041621-blog.htm">1041621蘇建文</a>
                 <a class="dropdown-item" href="1041702-blog.htm">1041702沈明儒</a>
@@ -90,228 +91,262 @@
                 <p>我們所工作的部門是，歷史語言研究所中的數位文化中心。剛到數位文化中心後，由一位負責數位文化中心技術組的主管—王祥安博士，向我們簡單介紹了數位文化中心，並向我們說明上屆實習的學長姐工作，讓我們選擇有興趣的題目接手、或是其他和中心業務有關的題目。
                   主管給我們的方向主要分為，網頁開發、社群網路分析、文字探勘及影像處理。也給我們約莫一星期的時間思考自己有興趣的項目。
                 </p>
+                <p>暑假開始，我將文字探勘的工作交接給新來的同學後，開始做與網路、系統相關的工作。</p>
               </div>
+
               <div>
-                <div>
-                  <a href="#job-des-1">1. 文字探勘</a>
-                  <a href="#job-des-2">2. Kubernetes 建置</a>
-                </div>
-                <br>
-                <!-- <p>(2) 工作內容：</p> -->
-                <p id="job-des-1" class="para-title" style="font-size: 1.4em">1. 文字探勘</p>
-                <p class="para-title" style="font-size: 1.4em">練習</p>
-                <p>我選擇題目是文字探勘，在確定題目之後，接下來就是學習之後要用到的技術和工具，主要是Java和Solr。 主管給我一本Java的書，要我先熟悉Java的基本語法，並要我去看Solr的官方文件，先學習這兩個技術，以及一個練習題，要我從這個練習開始，熟悉如何使用Java及Solr。而這個練習是要將一些專家和學者的註解、眉批、頁碼等xml的標籤，還原到Solr的查詢到的文章段落中。</p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1-1.png" alt="1-1" class="img_equalwidth">
-                  <p>上圖為Solr的查詢結果，目標是要將page、qn欄位中的xml標籤，還原到content中原本的位置。</p>
-                </div>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1-2.png" alt="1-2" class="img_equalwidth">
-                  <p>完成練習結果，成功將page、qn等xml標籤，還原到content中原本的位置。</p>
-                </div>
-                <br>
-                <p class="para-title" style="font-size: 1.4em">文對文比對功能</p>
-                <p>在練習完成之後，我也對Java稍微比較熟悉了，主管交代給我的工作內容是， 開發數位人文研究平台網站上的文對文比對的功能。開始前，第一件事就是要將開發環境架設好， 用到的工具包括Tomcat、MySQL、Solr，也因為這是一個許多人合作的專案，所有也會用到Git。</p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1-3.png" alt="1-3" class="img_equalwidth">
-                  <p>http://dh.ascdc.sinica.edu.tw/ - 數位人文研究平台</p>
-                </div>
-                <p>數位人文研究平台是由中央研究院數位文化中心(ASCDC)根據人文研究的需求，發展協助學者提升研究質量的數位化工具與平台。數位人文研究平台提供雲端服務，研究者不需擁有強大的運算與儲存設備，只需透過網路即可使用。可提供個人使用，也具有多人協同研究機制，可共享研究資源。</p>
-                <p>數位人文研究平台，主要由我們數位文化中心開發，因此也有幾位實習的資工資管學長以及技術組內的同仁在開發，而我負責的是文對文比對功能，用於讓與用者能由輸入的文字段落，與資料庫中的文章作比對，找到相似的文章段落。</p>
-                <p>原本數位人文研究平台上，已經有文對文的相似度比對功能了，但主管說舊版的功能效果並不好，因此需要重新改寫。我主要用的相似度判斷方法為，兩段文字中，相同字的所佔的比例，若是高於門檻值，則視為相似的段落。除了找出相似的段落外，還要將段落中相似的句子標記起來。主管也告訴我可以用一個LCS（longest
-                  common sequence）最長公共子序列的演算法，用它來找到兩段文字中，相同字所在的位置的位置。</p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1-4.png" alt="1-4" class="img_center">
-                  <p>運用LCS最長公共子序列演算法，找出兩段文字中，相似的部分。</p>
-                </div>
-                <p>一開始完成的版本，我的作法是，用一個段落去把比對的目標書中，所有段落都比對過一次的方式，找到相似的段落(例如：我想要拿n個段落，與我的資料庫中的文章找出相似的段落。假設資料庫中有m個段落，那總共比對的是次數就是(n
-                  * m)次)，但是搜尋速度太慢。</p>
-                <p>主管告訴我，可以用一個TF-IDF（Term Frequency - Inverse Document Frequency）的計算詞頻的演算法，幫你找一段文字中重要的關鍵段詞，再用這些關鍵詞作為條件向Solr下查詢，再用查詢的結果作比對就好，這樣可以減少需要比對的次數(減少m的數量)。</p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1-5.png" alt="1-5" class="img_equalwidth">
-                  <p>利用TF-IDF這個詞頻演算法，找到一段文字中重要的詞，再用這些關鍵詞組成Solr的查詢語法，向Solr下查詢，再用查詢的結果，與原文本作比對，藉此加快查詢速度。</p>
-                </div>
-                <p>再經過主管建議的方法修改後，查詢的速度已經有顯著提升。</p>
-                <p>接下來就是如何把結果呈現在網頁上，也就是網頁前後端的串接，網頁後端也是用Java作開發，也因為自己之前有碰過php，用Java開發網頁時發現，其實兩者的概念是差不多的，因此也沒有遇到較大困難。</p>
-                <p>除了網頁呈現的部分，主管也會常常提出一些修改建議，例如:在比對相似度的方法，希望能考量到相同文字的密集程度。希望我們可以嘗試看看，把這個想法實作出來，比較看看效果如何。</p>
-                <p>因為我們所開發的功能是要真正上線，讓使用者去使用的，因此經常需要和主管討論，一些需要改善或修改的部分、增加新需求，還有例外情況的處理。過程中經常會需要去嘗試各種不同的比對方法，實驗看看能不能提升正確率，主管也給我們很大的彈性，並不會要求我們在期限內一定要完成，反倒是希望我們花多一點時間去交叉驗證，或是更好的解決方法。</p>
+                <a href="#job-des-1">1. 文字探勘(1062)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#job-des-2">2. Kubernetes 建置(暑期)</a>
               </div>
-              <div>
-                <p id="job-des-2" class="para-title" style="font-size: 1.4em">2. Kubernetes 建置</p>
-                <p>暑假開始，文字探勘的工作完成到一段落後，工作內容開始以系統維運為主。 我們數位文化中心負責系統運維的人員並不多，在人力資源有限的情況下，我們採用容器來管理的伺服器平台，簡化系統的部署與維護成本。當時我們中心所用的是以Rancher1.x架設的容器管理系統，因舊版的Rancher將無法兼容新的版本，因此我開始研究如何建置以Kubernetes為基礎的容器平台。
-                </p>
-                <p>
-                  我們使用Rancher管理Kubernetes，主要由以下三者組成：
-                </p>
-                <p>
-                  <b>Docker Container : </b>容器是新世代雲端虛擬化技術，Docker屬於Container的一種 (其他容器還有 Rocket Container, LXC)，一般只用於單機使用。
-                </p>
-                <p>
-                  <b>Kubernetes : </b>Container的叢集管理工具，可以管理各種 Container 叢集。 Kubernetes叢集使用的一個以上的實體或虛擬主機的集合，提供給Kubernetes使用執行相關應用程式，其他競爭者有
-                  Mesos, docker swarm。
-                </p>
-                <p>
-                  <b>Rancher : </b>開源的container管理介面，方便管理者管理監控。2.0版開始僅支援Kubernetes。
-                </p>
-                <p>
-                  因舊版的Rancher將無法兼容新的版本，因此我開始研究如何建置以Kubernetes為基礎的容器平台，並用串接新版的Rancher做管理。
-                </p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-1.png" alt="1.2-1" class="img_equalwidth">
-                  <p>Rancher 新舊版本比較</p>
+              <br>
+              <div id="jobs-des">
+                <div id="job-des-1" class="job-1">
+                  <!-- <p>(2) 工作內容：</p> -->
+                  <p id="job-des-1-title" class="para-title" style="font-size: 1.4em">1. 文字探勘</p>
+                  <p class="para-title" style="font-size: 1.4em">練習</p>
+                  <p>我選擇題目是文字探勘，在確定題目之後，接下來就是學習之後要用到的技術和工具，主要是Java和Solr。
+                    主管給我一本Java的書，要我先熟悉Java的基本語法，並要我去看Solr的官方文件，先學習這兩個技術，以及一個練習題，要我從這個練習開始，熟悉如何使用Java及Solr。而這個練習是要將一些專家和學者的註解、眉批、頁碼等xml的標籤，還原到Solr的查詢到的文章段落中。</p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1-1.png" alt="1-1" class="img_equalwidth">
+                    <p>上圖為Solr的查詢結果，目標是要將page、qn欄位中的xml標籤，還原到content中原本的位置。</p>
+                  </div>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1-2.png" alt="1-2" class="img_equalwidth">
+                    <p>完成練習結果，成功將page、qn等xml標籤，還原到content中原本的位置。</p>
+                  </div>
+                  <br>
+                  <p class="para-title" style="font-size: 1.4em">文對文比對功能</p>
+                  <p>在練習完成之後，我也對Java稍微比較熟悉了，主管交代給我的工作內容是， 開發數位人文研究平台網站上的文對文比對的功能。開始前，第一件事就是要將開發環境架設好，
+                    用到的工具包括Tomcat、MySQL、Solr，也因為這是一個許多人合作的專案，所有也會用到Git。</p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1-3.png" alt="1-3" class="img_equalwidth">
+                    <p>http://dh.ascdc.sinica.edu.tw/ - 數位人文研究平台</p>
+                  </div>
+                  <p>數位人文研究平台是由中央研究院數位文化中心(ASCDC)根據人文研究的需求，發展協助學者提升研究質量的數位化工具與平台。數位人文研究平台提供雲端服務，研究者不需擁有強大的運算與儲存設備，只需透過網路即可使用。可提供個人使用，也具有多人協同研究機制，可共享研究資源。</p>
+                  <p>數位人文研究平台，主要由我們數位文化中心開發，因此也有幾位實習的資工資管學長以及技術組內的同仁在開發，而我負責的是文對文比對功能，用於讓與用者能由輸入的文字段落，與資料庫中的文章作比對，找到相似的文章段落。</p>
+                  <p>原本數位人文研究平台上，已經有文對文的相似度比對功能了，但主管說舊版的功能效果並不好，因此需要重新改寫。我主要用的相似度判斷方法為，兩段文字中，相同字的所佔的比例，若是高於門檻值，則視為相似的段落。除了找出相似的段落外，還要將段落中相似的句子標記起來。主管也告訴我可以用一個LCS（longest
+                    common sequence）最長公共子序列的演算法，用它來找到兩段文字中，相同字所在的位置的位置。</p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1-4.png" alt="1-4" class="img_center">
+                    <p>運用LCS最長公共子序列演算法，找出兩段文字中，相似的部分。</p>
+                  </div>
+                  <p>一開始完成的版本，我的作法是，用一個段落去把比對的目標書中，所有段落都比對過一次的方式，找到相似的段落(例如：我想要拿n個段落，與我的資料庫中的文章找出相似的段落。假設資料庫中有m個段落，那總共比對的是次數就是(n
+                    * m)次)，但是搜尋速度太慢。</p>
+                  <p>主管告訴我，可以用一個TF-IDF（Term Frequency - Inverse Document Frequency）的計算詞頻的演算法，幫你找一段文字中重要的關鍵段詞，再用這些關鍵詞作為條件向Solr下查詢，再用查詢的結果作比對就好，這樣可以減少需要比對的次數(減少m的數量)。</p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1-5.png" alt="1-5" class="img_equalwidth">
+                    <p>利用TF-IDF這個詞頻演算法，找到一段文字中重要的詞，再用這些關鍵詞組成Solr的查詢語法，向Solr下查詢，再用查詢的結果，與原文本作比對，藉此加快查詢速度。</p>
+                  </div>
+                  <p>再經過主管建議的方法修改後，查詢的速度已經有顯著提升。</p>
+                  <p>接下來就是如何把結果呈現在網頁上，也就是網頁前後端的串接，網頁後端也是用Java作開發，也因為自己之前有碰過php，用Java開發網頁時發現，其實兩者的概念是差不多的，因此也沒有遇到較大困難。</p>
+                  <p>除了網頁呈現的部分，主管也會常常提出一些修改建議，例如:在比對相似度的方法，希望能考量到相同文字的密集程度。希望我們可以嘗試看看，把這個想法實作出來，比較看看效果如何。</p>
+                  <p>因為我們所開發的功能是要真正上線，讓使用者去使用的，因此經常需要和主管討論，一些需要改善或修改的部分、增加新需求，還有例外情況的處理。過程中經常會需要去嘗試各種不同的比對方法，實驗看看能不能提升正確率，主管也給我們很大的彈性，並不會要求我們在期限內一定要完成，反倒是希望我們花多一點時間去交叉驗證，或是更好的解決方法。</p>
                 </div>
-                <p>一開始，主管給了我五台虛擬機，安裝Kubernetes叢集，並研究各個元件的功能、用途。</p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-2.png" alt="1.2-2" class="img_equalwidth">
-                  <p>一台虛擬機安裝Rancher，其餘四台組成Kubernetes cluster</p>
-                </div>
-                <p>
-                  Kubernetes cluster是使用的一個以上的實體或虛擬主機的集合，提供給Kubernetes使用執行相關應用程式。cluster中的節點主機分為三種腳色，分別是Masters, etcd, Node：
-                </p>
-                <p>
-                  <b>Masters</b>是Kubernetes中最重要的腳色，提供API Server、叢集資源排程、應用部署管理等功能。
-                </p>
-                <p>
-                  <b>Etcd</b>是一款利用raft一致性算法來實現的分散式資料庫，用於保存cluster所有的網絡配置和元件的狀態訊息。
-                </p>
-                <p>
-                  <b>Node</b>是執行Kubernetes的實體或虛擬的主機，屬於Cluster的一部份，上面可以執行與排程Pod。
-                </p>
-                <p>
-                  除了安裝之外，主管要我研究各項元件，其功能、用途。
-                </p>
-                <p>
-                  <b>Pod： </b>Kubernetes 上會運行很多個不同種類型的應用服務(applications)，而一個 Pod 在Kubernetes世界中就相當於一個application；一個 Pod 裡面可以包含一個或多個
-                  Docker Container；在同一個 Pod 裡面的 containers，可以用 local port numbers 來互相溝通。
-                </p>
-                <p>
-                  <b>Deployment： </b>管理多個Pod，除了部署一個應用服務，提供平行擴展應用服務的能力，提高服務的負載量，也提供版本控制，升級降級的功能，最強大的是他能在正常運作中更新應用程式，使用者不會感覺到服務被中斷；有任何錯誤時或關閉時能自動重新創建一個Pod。
-                </p>
-                <p>
-                  <b>Service ： </b>Pod 前面再接一層橋樑，透過這個 NodePort, ClusterIP訪問到 Kubernetes Cluster 內正在運行中的 Pods，並確保每次存取應用程式服務時，都能連結到正在運行的Pod。
-                </p>
-                <p>
-                  <b>Label： </b>簡單來說，Labels就是一對具有辨識度的key/value 當 Pod 數量越來越多時，管理的維度也會逐漸複雜，譬如如何將 Pod 在不同地區上部署，不同層級的 Pod 如何分開管理，如何決定哪個類型的
-                  Pod，部署在相對應的 Node 上，都是我們在實際場景上需要考量的部分。而 Kubernetes 提供了我們 Labels 這個元件，讓我們能對每個不同屬性的 Pod 都能貼上屬於他們自己的標籤、且將有不同種類的標籤
-                  Pod 做分群管理。
-                </p>
-                <p>
-                  <b>Annotations： </b>沒有識別用途的標籤。我們可以在Pod的 Annotations 紀錄該 Pod的發行時間，發行版本，聯絡人email等。Annotations 主要是方便開發者、以及系統管理者管理上的方便，不會直接被
-                  Kubernetes使用。
-                </p>
-                <p>
-                  <b>Volume： </b>可以把Volumes當成是 Kubernetes Cluster 中專們用來儲存資料的地方。不但能將 container 的資料儲存下來，也可以透過掛載(mounting)的方式，供許多個
-                  Pods 同時存取。
-                </p>
-                <p>
-                  因為container 儲存的資料會隨著 container 的生命週期消失而消失，而無法被保存下來。使用Volume讓這個 Pod 中的 container 即便因為某些因素而 crash ，資料仍可完整的被保存下來，讓新產生的 container
-                  能延續使用。
-                </p>
-                <p>
-                  <b>Secret： </b>協助開發者將一些敏感資訊，像是資料庫帳密、訪問其他台 server 的 Access Token 、SSH Key，以base64編碼，用非明碼的方式(opaque) 存放在
-                  Kubernetes 中，可以當成環境變數(environment variables) 使用，或是掛載(mount) 在 Pod 某個檔案路徑底下使用。
-                </p>
-                <p>
-                  <b>ConfigMap： </b>提供一個 Configuration 可以統一存放的地方，也提供一個方法讓開發者可以動態且代碼化的方式為每個應用服務配置其相對應的 Configuration，這樣設計的好處是，無需修改
-                  container 程式碼，可以替換不同環境的 Config，開發過程中，常因應不同的環境需配置不同的 configuration，像是 staging 與 production 存取的資料庫位址不一致等等。無需修改程式碼的特點，可以幫助我們更快部署到各個不同的環境中。
-                </p>
-                <p>
-                  <b>Ingress： </b>使 Node 對外開放的 port 統一，結合 Ingress Controller 更能在 Kubernetes Cluster 中實現負載平衡 的功能。
-                </p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-3.png" alt="1.2-3" class="img_equalwidth">
-                  <p>當多個 Service 同時運行時，Node 都需要有相對應的 port number 去對應相每個 Service 的 port number</p>
-                </div>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-4.png" alt="1.2-4" class="img_equalwidth">
-                  <p>若是使用 Ingress ，我們只需開放一個對外的 port number，Ingress 可以在設定檔中設置不同的路徑，決定要將使用者的請求傳送到哪個 Service 物件</p>
-                </div>
-                <p>
-                  這樣的設計，除了讓運維者無需維護多個 port 或頻繁更改防火牆(firewall)外，可以自設條件的功能也使得請求的導向更加彈性。
-                </p>
-                <p>
-                  <b>Cronjob： </b>有時我們會需要有個週期性運行的服務，像是每天早上出昨天網站流量的報表，或是每隔一段時間去訪問某個 API 取得目前該應用服務的最新資訊。像這樣每小時、每日、每週、每月每隔一段固定時間要做的工作，我們會丟到
-                  Linux 的 crontab，而 Kubernetes 也提供了Cronjob 元件幫我們實現排程服務。
-                </p>
-                <p>
-                  <b>Namespace： </b>當 Kubernetes 提供給越來越多人使用時，Namespace讓我們能根據專案不同、執行團隊不同，或是商業考量，將原本擁有實體資源的單一 Kubernetes Cluster
-                  ，劃分成幾個不同的抽象的 Cluster (virtual cluster)。
-                </p>
-                <p>
-                  這對我們中心來說是相當重要的一項功能，因為我們中心同時有許多專案同時會使用這個平台，而如何劃分資源給不同專案使用，也是一大問題。
-                </p>
-                <p>
-                  以上元件外，也有許多細節上的調整，透過這些Kubernetes提供的功能，能減輕系統維運人員的管理負擔。
-                </p>
-                <p>
-                  <b>Healthcheck： </b>Health Checks 協助我們去偵測 Pod 中的 containers 是否都還正常運作，確保服務本身也能正常運行。有些時候，雖然 Pod 還在運行，但在 Pod
-                  中的 web app container 可能因為某些原因已經停止運作，或是資源被其他 containers 佔用，導致我們送去的 request 無法正常回應，這時利用Health Checks的功能，Kubernetes會自動替我們做好檢測服務是否正常的工作，減輕系統維運人員的管理負擔。
-                </p>
-                <p>
-                  <b>Autoscaling： </b>在許多實際場景中，應用服務常常需因應不同流量而配置不同的資源。好比：原本的應用服務可能每天都只有 10 人使用，我們只需要架設一台小 server 即可應付這些流量；當有天應用服務因為某些因素使用人數上升到
-                  10 萬人，可能我們原有的資源不足以回應這些流量，導致使用者無法連上該應用服務。 Kubernetes會依據目前的資源使用率，決定是否自動調整資源來回應這些流量(像是加開 server)來應付流量。
-                </p>
-                <p>
-                  除了研究各個元件的功能，因為之後要將container自舊的系統移植到新的Kubernetes平台上，我也研究了如何解決一些在新舊系統上，與新系統上設計原理不同而造成的問題，例如新舊系統在Volume掛載方式上的機制不同。
-                </p>
-                <p>
-                  舊的系統中：volume掛載到container中，會將container及volume中的資料同步，新的系統(Kubernetes)中：volume掛載到container中會以volume的狀態為主。 因為這樣的差異造成，有些資料存在container中，但想要把它取出來，而掛上volume後，卻被覆蓋掉了。因此主管也要我想辦法解決他。而我想到的解決方法是，開兩個container掛上同一個共用的volume，將A要保留的資料複製到共同的volume下，再把這個volume掛載到B要的資料夾下。如此解決了這個問題
-                </p>
-                <p>
-                  除了學習各項元件的用法，因應主管的需求，建置了一套監控服務在Kubernetes上。 對於維運團隊而言，如何監控應用服務在 Server 上的資源使用是個很重要的事情，透過監控、可以偵測目前服務是否發生異常之外，也可以透過過去監控的資料對服務做最佳化。
-                </p>
-                <p>
-                  而我使用的監控服務由Prometheus, Grafana, AlertManager三者組成：
-                </p>
-                <p>
-                  運作流程：
-                </p>
-                <p>
-                  1. Prometheus Server 定期向Kubernetes的Exporters 中拉取資源使用狀態
-                </p>
-                <p>
-                  2. Prometheus Server 在 Local 儲存收集到的 Metrics，並運行已定義好的規則(alert.rules)，當符合的情況發生時(例如：CPU使用率超果80%)，向AlertManager 發送警報
-                </p>
-                <p>
-                  3. AlertManager依據設定的通知方式，向管理者的Email或是slack送出通知
-                </p>
-                <p>
-                  4. Grafana透過Prometheus提供的查詢語法，設定出符合需求的圖表(Dashboard)
-                </p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-5.jpg" alt="1.2-5" class="img_equalwidth">
-                  <p>運作流程圖</p>
-                </div>
-                <p>
-                  <b>Prometheus：</b>
-                  Prometheus負責蒐集Kubernetes的系統資源使用資訊。它是一套開放式原始碼的系統監控警報框架與TSDB(Time Series Database)。時間序列資料透過 Key-value 來區分，且可以設定任意的多維標籤，並提供靈活的查詢語言(PromQL)，可進行加減乘除等，基於
-                  HTTP 的 Pull 方式收集時序資料，支援多種視覺化儀表板呈現，如 Grafana。
-                </p>
-                <p>
-                  <b>Grafana：</b>
-                  一個可將這些數據視覺化的平台(Dashboard)，透過Prometheus提供的查詢語言(PromQL) ，將搜集到的資料變成圖表呈現出來。
-                </p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-6.png" alt="1.2-6" class="img_equalwidth">
-                  <p>Grafana介面</p>
-                </div>
-                <p>
-                  <b>AlertManager：</b>
-                  接收來至 Prometheus Server 的 Alert event，並依據定義的 Notification 組態發送警報，像是E-mail、slack 與 Webhook 等等
-                </p>
-                <p>
-                  接者主管要我研究如何在ESXi上大量部署Kubernetes。除了Rancher本身提供的GUI介面，可以直接設定的方式外，也自己嘗試使用ansible以及rke (自動化腳本工具)完成大量部署的工作。
-                </p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-7.png" alt="1.2-7" class="img_equalwidth">
-                  <p>用Rancher大量部署Kubernetes</p>
-                </div>
-                <p>
-                  最後，主管要求我把學習的結果，記錄下來，製作成使用手冊，分成給使用者看的使用說明，以及給管理人員看的架設教學。
-                </p>
-                <div class="div_pacture">
-                  <img src="images/report/1041713/1.2-8.png" alt="1.2-8" class="img_equalwidth">
-                  <p>使用手冊，分成給<a href="https://zi-shane.gitbook.io/rancher-user/">使用者看的使用說明</a>，以及給<a href="https://zi-shane.gitbook.io/rancher-admin/">管理人員看的架設教學</a></p>
+
+                <div id="job-des-2" class="job-2">
+                  <p id="job-des-2-title" class="para-title" style="font-size: 1.4em">2. Kubernetes 建置</p>
+                  <p>暑假開始，文字探勘的工作完成到一段落後，工作內容開始以系統維運為主。
+                    我們數位文化中心負責系統運維的人員並不多，在人力資源有限的情況下，我們採用容器來管理的伺服器平台，簡化系統的部署與維護成本。當時我們中心所用的是以Rancher1.x架設的容器管理系統，因舊版的Rancher將無法兼容新的版本，因此我開始研究如何建置以Kubernetes為基礎的容器平台。
+                  </p>
+                  <p>
+                    我們使用Rancher管理Kubernetes，主要由以下三者組成：
+                  </p>
+                  <p>
+                    <b>Docker Container : </b>容器是新世代雲端虛擬化技術，Docker屬於Container的一種 (其他容器還有 Rocket Container,
+                    LXC)，一般只用於單機使用。
+                  </p>
+                  <p>
+                    <b>Kubernetes : </b>Container的叢集管理工具，可以管理各種 Container 叢集。
+                    Kubernetes叢集使用的一個以上的實體或虛擬主機的集合，提供給Kubernetes使用執行相關應用程式，其他競爭者有
+                    Mesos, docker swarm。
+                  </p>
+                  <p>
+                    <b>Rancher : </b>開源的container管理介面，方便管理者管理監控。2.0版開始僅支援Kubernetes。
+                  </p>
+                  <p>
+                    因舊版的Rancher將無法兼容新的版本，因此我開始研究如何建置以Kubernetes為基礎的容器平台，並用串接新版的Rancher做管理。
+                  </p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-1.png" alt="1.2-1" class="img_equalwidth">
+                    <p>Rancher 新舊版本比較</p>
+                  </div>
+                  <p>一開始，主管給了我五台虛擬機，安裝Kubernetes叢集，並研究各個元件的功能、用途。</p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-2.png" alt="1.2-2" class="img_equalwidth">
+                    <p>一台虛擬機安裝Rancher，其餘四台組成Kubernetes cluster</p>
+                  </div>
+                  <p>
+                    Kubernetes cluster是使用的一個以上的實體或虛擬主機的集合，提供給Kubernetes使用執行相關應用程式。cluster中的節點主機分為三種腳色，分別是Masters, etcd,
+                    Node：
+                  </p>
+                  <p>
+                    <b>Masters</b>是Kubernetes中最重要的腳色，提供API Server、叢集資源排程、應用部署管理等功能。
+                  </p>
+                  <p>
+                    <b>Etcd</b>是一款利用raft一致性算法來實現的分散式資料庫，用於保存cluster所有的網絡配置和元件的狀態訊息。
+                  </p>
+                  <p>
+                    <b>Node</b>是執行Kubernetes的實體或虛擬的主機，屬於Cluster的一部份，上面可以執行與排程Pod。
+                  </p>
+                  <p>
+                    除了安裝之外，主管要我研究各項元件，其功能、用途。
+                  </p>
+                  <p>
+                    <b>Pod： </b>Kubernetes 上會運行很多個不同種類型的應用服務(applications)，而一個 Pod 在Kubernetes世界中就相當於一個application；一個
+                    Pod
+                    裡面可以包含一個或多個
+                    Docker Container；在同一個 Pod 裡面的 containers，可以用 local port numbers 來互相溝通。
+                  </p>
+                  <p>
+                    <b>Deployment： </b>管理多個Pod，除了部署一個應用服務，提供平行擴展應用服務的能力，提高服務的負載量，也提供版本控制，升級降級的功能，最強大的是他能在正常運作中更新應用程式，使用者不會感覺到服務被中斷；有任何錯誤時或關閉時能自動重新創建一個Pod。
+                  </p>
+                  <p>
+                    <b>Service ： </b>Pod 前面再接一層橋樑，透過這個 NodePort, ClusterIP訪問到 Kubernetes Cluster 內正在運行中的
+                    Pods，並確保每次存取應用程式服務時，都能連結到正在運行的Pod。
+                  </p>
+                  <p>
+                    <b>Label： </b>簡單來說，Labels就是一對具有辨識度的key/value 當 Pod 數量越來越多時，管理的維度也會逐漸複雜，譬如如何將 Pod 在不同地區上部署，不同層級的 Pod
+                    如何分開管理，如何決定哪個類型的
+                    Pod，部署在相對應的 Node 上，都是我們在實際場景上需要考量的部分。而 Kubernetes 提供了我們 Labels 這個元件，讓我們能對每個不同屬性的 Pod
+                    都能貼上屬於他們自己的標籤、且將有不同種類的標籤
+                    Pod 做分群管理。
+                  </p>
+                  <p>
+                    <b>Annotations： </b>沒有識別用途的標籤。我們可以在Pod的 Annotations 紀錄該 Pod的發行時間，發行版本，聯絡人email等。Annotations
+                    主要是方便開發者、以及系統管理者管理上的方便，不會直接被
+                    Kubernetes使用。
+                  </p>
+                  <p>
+                    <b>Volume： </b>可以把Volumes當成是 Kubernetes Cluster 中專們用來儲存資料的地方。不但能將 container
+                    的資料儲存下來，也可以透過掛載(mounting)的方式，供許多個
+                    Pods 同時存取。
+                  </p>
+                  <p>
+                    因為container 儲存的資料會隨著 container 的生命週期消失而消失，而無法被保存下來。使用Volume讓這個 Pod 中的 container 即便因為某些因素而 crash
+                    ，資料仍可完整的被保存下來，讓新產生的 container
+                    能延續使用。
+                  </p>
+                  <p>
+                    <b>Secret： </b>協助開發者將一些敏感資訊，像是資料庫帳密、訪問其他台 server 的 Access Token 、SSH Key，以base64編碼，用非明碼的方式(opaque)
+                    存放在
+                    Kubernetes 中，可以當成環境變數(environment variables) 使用，或是掛載(mount) 在 Pod 某個檔案路徑底下使用。
+                  </p>
+                  <p>
+                    <b>ConfigMap： </b>提供一個 Configuration 可以統一存放的地方，也提供一個方法讓開發者可以動態且代碼化的方式為每個應用服務配置其相對應的
+                    Configuration，這樣設計的好處是，無需修改
+                    container 程式碼，可以替換不同環境的 Config，開發過程中，常因應不同的環境需配置不同的 configuration，像是 staging 與 production
+                    存取的資料庫位址不一致等等。無需修改程式碼的特點，可以幫助我們更快部署到各個不同的環境中。
+                  </p>
+                  <p>
+                    <b>Ingress： </b>使 Node 對外開放的 port 統一，結合 Ingress Controller 更能在 Kubernetes Cluster 中實現負載平衡 的功能。
+                  </p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-3.png" alt="1.2-3" class="img_equalwidth">
+                    <p>當多個 Service 同時運行時，Node 都需要有相對應的 port number 去對應相每個 Service 的 port number</p>
+                  </div>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-4.png" alt="1.2-4" class="img_equalwidth">
+                    <p>若是使用 Ingress ，我們只需開放一個對外的 port number，Ingress 可以在設定檔中設置不同的路徑，決定要將使用者的請求傳送到哪個 Service 物件</p>
+                  </div>
+                  <p>
+                    這樣的設計，除了讓運維者無需維護多個 port 或頻繁更改防火牆(firewall)外，可以自設條件的功能也使得請求的導向更加彈性。
+                  </p>
+                  <p>
+                    <b>Cronjob： </b>有時我們會需要有個週期性運行的服務，像是每天早上出昨天網站流量的報表，或是每隔一段時間去訪問某個 API
+                    取得目前該應用服務的最新資訊。像這樣每小時、每日、每週、每月每隔一段固定時間要做的工作，我們會丟到
+                    Linux 的 crontab，而 Kubernetes 也提供了Cronjob 元件幫我們實現排程服務。
+                  </p>
+                  <p>
+                    <b>Namespace： </b>當 Kubernetes 提供給越來越多人使用時，Namespace讓我們能根據專案不同、執行團隊不同，或是商業考量，將原本擁有實體資源的單一
+                    Kubernetes
+                    Cluster
+                    ，劃分成幾個不同的抽象的 Cluster (virtual cluster)。
+                  </p>
+                  <p>
+                    這對我們中心來說是相當重要的一項功能，因為我們中心同時有許多專案同時會使用這個平台，而如何劃分資源給不同專案使用，也是一大問題。
+                  </p>
+                  <p>
+                    以上元件外，也有許多細節上的調整，透過這些Kubernetes提供的功能，能減輕系統維運人員的管理負擔。
+                  </p>
+                  <p>
+                    <b>Healthcheck： </b>Health Checks 協助我們去偵測 Pod 中的 containers 是否都還正常運作，確保服務本身也能正常運行。有些時候，雖然 Pod
+                    還在運行，但在
+                    Pod
+                    中的 web app container 可能因為某些原因已經停止運作，或是資源被其他 containers 佔用，導致我們送去的 request 無法正常回應，這時利用Health
+                    Checks的功能，Kubernetes會自動替我們做好檢測服務是否正常的工作，減輕系統維運人員的管理負擔。
+                  </p>
+                  <p>
+                    <b>Autoscaling： </b>在許多實際場景中，應用服務常常需因應不同流量而配置不同的資源。好比：原本的應用服務可能每天都只有 10 人使用，我們只需要架設一台小 server
+                    即可應付這些流量；當有天應用服務因為某些因素使用人數上升到
+                    10 萬人，可能我們原有的資源不足以回應這些流量，導致使用者無法連上該應用服務。 Kubernetes會依據目前的資源使用率，決定是否自動調整資源來回應這些流量(像是加開 server)來應付流量。
+                  </p>
+                  <p>
+                    除了研究各個元件的功能，因為之後要將container自舊的系統移植到新的Kubernetes平台上，我也研究了如何解決一些在新舊系統上，與新系統上設計原理不同而造成的問題，例如新舊系統在Volume掛載方式上的機制不同。
+                  </p>
+                  <p>
+                    舊的系統中：volume掛載到container中，會將container及volume中的資料同步，新的系統(Kubernetes)中：volume掛載到container中會以volume的狀態為主。
+                    因為這樣的差異造成，有些資料存在container中，但想要把它取出來，而掛上volume後，卻被覆蓋掉了。因此主管也要我想辦法解決他。而我想到的解決方法是，開兩個container掛上同一個共用的volume，將A要保留的資料複製到共同的volume下，再把這個volume掛載到B要的資料夾下。如此解決了這個問題
+                  </p>
+                  <p>
+                    除了學習各項元件的用法，因應主管的需求，建置了一套監控服務在Kubernetes上。 對於維運團隊而言，如何監控應用服務在 Server
+                    上的資源使用是個很重要的事情，透過監控、可以偵測目前服務是否發生異常之外，也可以透過過去監控的資料對服務做最佳化。
+                  </p>
+                  <p>
+                    而我使用的監控服務由Prometheus, Grafana, AlertManager三者組成：
+                  </p>
+                  <p>
+                    運作流程：
+                  </p>
+                  <p>
+                    1. Prometheus Server 定期向Kubernetes的Exporters 中拉取資源使用狀態
+                  </p>
+                  <p>
+                    2. Prometheus Server 在 Local 儲存收集到的
+                    Metrics，並運行已定義好的規則(alert.rules)，當符合的情況發生時(例如：CPU使用率超果80%)，向AlertManager 發送警報
+                  </p>
+                  <p>
+                    3. AlertManager依據設定的通知方式，向管理者的Email或是slack送出通知
+                  </p>
+                  <p>
+                    4. Grafana透過Prometheus提供的查詢語法，設定出符合需求的圖表(Dashboard)
+                  </p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-5.jpg" alt="1.2-5" class="img_equalwidth">
+                    <p>運作流程圖</p>
+                  </div>
+                  <p>
+                    <b>Prometheus：</b>
+                    Prometheus負責蒐集Kubernetes的系統資源使用資訊。它是一套開放式原始碼的系統監控警報框架與TSDB(Time Series Database)。時間序列資料透過 Key-value
+                    來區分，且可以設定任意的多維標籤，並提供靈活的查詢語言(PromQL)，可進行加減乘除等，基於
+                    HTTP 的 Pull 方式收集時序資料，支援多種視覺化儀表板呈現，如 Grafana。
+                  </p>
+                  <p>
+                    <b>Grafana：</b>
+                    一個可將這些數據視覺化的平台(Dashboard)，透過Prometheus提供的查詢語言(PromQL) ，將搜集到的資料變成圖表呈現出來。
+                  </p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-6.png" alt="1.2-6" class="img_equalwidth">
+                    <p>Grafana介面</p>
+                  </div>
+                  <p>
+                    <b>AlertManager：</b>
+                    接收來至 Prometheus Server 的 Alert event，並依據定義的 Notification 組態發送警報，像是E-mail、slack 與 Webhook 等等
+                  </p>
+                  <p>
+                    接者主管要我研究如何在ESXi上大量部署Kubernetes。除了Rancher本身提供的GUI介面，可以直接設定的方式外，也自己嘗試使用ansible以及rke
+                    (自動化腳本工具)完成大量部署的工作。
+                  </p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-7.png" alt="1.2-7" class="img_equalwidth">
+                    <p>用Rancher大量部署Kubernetes</p>
+                  </div>
+                  <p>
+                    最後，主管要求我把學習的結果，記錄下來，製作成使用手冊，分成給使用者看的使用說明，以及給管理人員看的架設教學。
+                  </p>
+                  <div class="div_pacture">
+                    <img src="images/report/1041713/1.2-8.png" alt="1.2-8" class="img_equalwidth">
+                    <p>使用手冊，分成給<a href="https://zi-shane.gitbook.io/rancher-user/">使用者看的使用說明</a>，以及給<a href="https://zi-shane.gitbook.io/rancher-admin/">管理人員看的架設教學</a></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -319,7 +354,11 @@
             <!-- 實習期間完成的進度 -->
             <div id="work-step" class="second_div target">
               <h5>二、實習期間完成的進度</h5>
-              <p class="para-title" style="font-size: 1.4em">1.文對文比對功能</p>
+              <div>
+                <a href="#job-proc-1">1. 文對文比對(1062)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#job-proc-2">2. Kubernetes 使用手冊(暑期)</a>
+              </div>
+              <p id="job-proc-1" class="para-title" style="font-size: 1.4em">1.文對文比對功能</p>
               <p>以下為我負責完成的功能示意圖。</p>
               <p>主要分為兩種比對方法， 一是選擇資料庫中已有的文章段落，來與資料庫中的目標書作比對。 二是由使用者自行輸入文章段落，來與資料庫中的書作相似度比對。</p>
               <br>
@@ -342,7 +381,7 @@
                 <img src="images/report/1041713/1-9.png" alt="1-9" class="img_equalwidth">
                 <p>查詢結果， 並讓使用者可以再次輸入文章作比對</p>
               </div>
-              <p class="para-title" style="font-size: 1.4em">2. Kubernetes 使用手冊</p>
+              <p id="job-proc-2" class="para-title" style="font-size: 1.4em">2. Kubernetes 使用手冊</p>
               <p>
                 主管要求我把學習的結果，記錄下來，製作成使用手冊，分成給使用者看的使用說明，以及給管理人員看的架設教學。
               </p>
@@ -382,7 +421,8 @@
             </div>
             <div id="learn2" class="second_div target">
               <h5>二、 Solr</h5>
-              <p>Solr主要被用來儲存文本的資料，並用Java透過API來與Solr做溝通。之前只有聽過Solr這樣的全文檢索工具，來到這裡實習後，才第一次有機會實務上使用到這樣工具。 我覺得Solr很像是NoSQL的一種，大多是用來儲存沒有固定結構、且不須經常修改的資料，與學校所教的MSSQL、MySQL等關聯式資料庫不太相同。
+              <p>Solr主要被用來儲存文本的資料，並用Java透過API來與Solr做溝通。之前只有聽過Solr這樣的全文檢索工具，來到這裡實習後，才第一次有機會實務上使用到這樣工具。
+                我覺得Solr很像是NoSQL的一種，大多是用來儲存沒有固定結構、且不須經常修改的資料，與學校所教的MSSQL、MySQL等關聯式資料庫不太相同。
               </p>
             </div>
             <div id="learn3" class="second_div target">
@@ -416,19 +456,20 @@
             <div id="learn7" class="second_div target">
               <h5>六、 Kubernetes</h5>
               <p>
-                  Kubernetes是由Google所開源的一套Container Cluster系統，是目前最受歡迎的容器管理工具，並已逐漸成為主流。可以兼容於docker與rkt等container系統，提供一套跨雲的Container解決方案。透過Kubernetes，讓使用者可以輕鬆建置自己的雲端orchestration，並且可以在公有雲、私有雲以及自建的本地端環境中，而不用擔心被雲服務不同的API所限制。
+                Kubernetes是由Google所開源的一套Container
+                Cluster系統，是目前最受歡迎的容器管理工具，並已逐漸成為主流。可以兼容於docker與rkt等container系統，提供一套跨雲的Container解決方案。透過Kubernetes，讓使用者可以輕鬆建置自己的雲端orchestration，並且可以在公有雲、私有雲以及自建的本地端環境中，而不用擔心被雲服務不同的API所限制。
               </p>
               <p>
-                  ubernetes可以說是同容器Docker一起發展起來的，它提供應用部署、輕量級、維護、擴展機制等功能，他建構在容器技術之上
+                ubernetes可以說是同容器Docker一起發展起來的，它提供應用部署、輕量級、維護、擴展機制等功能，他建構在容器技術之上
               </p>
               <div class="div_pacture">
-                  <img src="images/report/1041713/2.2-1.jpg" alt="2.2-1" class="img_center">
-                  <p>
-                      Kubernetes最底層是作業系統Linux，而Docker容器建構在作業系統上，Kubernetes又建構在Docker之上，也因此為這些Docker所起的容器提供管理的功能，就像這些獨立容器個體之中的導航！非常巧的是Kubernetes官方的logo就是船陀，其字本意是古希臘語陀手的意思，我想這大概是命名的由來。Kubernetes也利用Google在容器技術上的實戰經驗，同時吸收Docker社群的最佳實踐，已成為雲端服務的重要陀手！
-                  </p>
-                </div>
+                <img src="images/report/1041713/2.2-1.jpg" alt="2.2-1" class="img_center">
+                <p>
+                  Kubernetes最底層是作業系統Linux，而Docker容器建構在作業系統上，Kubernetes又建構在Docker之上，也因此為這些Docker所起的容器提供管理的功能，就像這些獨立容器個體之中的導航！非常巧的是Kubernetes官方的logo就是船陀，其字本意是古希臘語陀手的意思，我想這大概是命名的由來。Kubernetes也利用Google在容器技術上的實戰經驗，同時吸收Docker社群的最佳實踐，已成為雲端服務的重要陀手！
+                </p>
+              </div>
               <p>
-                  利用Kubernetes可以方便的管理跨機器執行容器化的應用，主要的功能大概如下：
+                利用Kubernetes可以方便的管理跨機器執行容器化的應用，主要的功能大概如下：
               </p>
               <ol>
                 <li>
@@ -512,8 +553,8 @@
                   <a href="#learn6" class="list-item">如何做好報告</a>
                 </li>
                 <li>
-                    <a href="#learn7" class="list-item">Kubernetes</a>
-                  </li>
+                  <a href="#learn7" class="list-item">Kubernetes</a>
+                </li>
               </ul>
               <li>
                 <a href="#self-estimate" class="list-item">自我評估及心得感想</a>
