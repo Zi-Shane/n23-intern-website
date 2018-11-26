@@ -96,7 +96,8 @@
 
               <div>
                 <a href="#job-des-1">1. 文字探勘(1062)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-                <a href="#job-des-2">2. Kubernetes 建置(暑期)</a>
+                <a href="#job-des-2">2. Kubernetes 建置(暑期)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="#job-des-3">3. 封包轉送工具開發(1071)</a>
               </div>
               <br>
               <div id="jobs-des">
@@ -348,6 +349,13 @@
                     <p>使用手冊，分成給<a href="https://zi-shane.gitbook.io/rancher-user/">使用者看的使用說明</a>，以及給<a href="https://zi-shane.gitbook.io/rancher-admin/">管理人員看的架設教學</a></p>
                   </div>
                 </div>
+                <div id="job-des-3" class="job-3">
+                  <!-- <p>(2) 工作內容：</p> -->
+                  <p id="job-des-3-title" class="para-title" style="font-size: 1.4em">3. 封包轉送工具開發</p>
+                  <p>Kubernetes架設及使用研究告一段落後，目前正在使用DPDK開發網路流量分流的工具。
+                    因遇到辦公室路由器，同時上網人數過多，開始出現當機等網路不穩定現象，欲解決路由器超載之問題，因此利用DPDK這個開發工具包，開發一個網路封包的轉送工具，將網路流量分流至多台NAT伺服器，嘗試解決單一路由器效能不足的問題。
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -357,7 +365,6 @@
               <div>
                 <a href="#job-proc-1">1. 文對文比對(1062)</a>&nbsp;&nbsp;|&nbsp;&nbsp;
                 <a href="#job-proc-2">2. Kubernetes 使用手冊(暑期)</a>
-                <a href="#job-proc-3">3. 封包轉送工具開發(1071)</a>
               </div>
               <p id="job-proc-1" class="para-title" style="font-size: 1.4em">1.文對文比對功能</p>
               <p>以下為我負責完成的功能示意圖。</p>
@@ -400,10 +407,7 @@
                 <img src="images/report/1041713/1.2-10.png" alt="1.2-10" class="img_equalwidth">
                 <p><a href="https://zi-shane.gitbook.io/rancher-admin/">管理者版本的使用手冊</a></p>
               </div>
-              <p id="job-proc-3" class="para-title" style="font-size: 1.4em">3. 封包轉送工具開發</p>
-              <p>Kubernetes架設及使用研究告一段落後，目前正在使用DPDK開發網路流量分流的工具。
-因遇到辦公室路由器，同時上網人數過多，開始出現當機等網路不穩定現象，欲解決路由器超載之問題，因此利用DPDK這個開發工具包，開發一個網路封包的轉送工具，將網路流量分流至多台NAT伺服器，嘗試解決單一路由器效能不足的問題。
-              </p>
+
             </div>
 
             <!-- 工作當中扮演的角色 -->
@@ -495,15 +499,17 @@
               </p>
             </div>
             <div id="learn8" class="second_div target">
-              <h5>七、	網路封包轉送程式</h5>
+              <h5>七、 網路封包轉送程式</h5>
               <p>辦公室路由器因同時上網人數過多，開始出現當機等不穩定現象，欲解決路由器超載之問題，學生用C語言搭配DPDK函式庫開發一個網路封包的轉送工具，將網路流量分流至多台NAT伺服器的小工具。
-                開發過程中，更清楚理解書上的網路理論知識，以撰寫程式的方式將這個過程實作出來，令我對封包傳輸原理更加清楚，更能理解網路再傳輸過程究竟怎麼處理的。
-                DPDK（Data Plane Development Kit）為Intel開源的專案，這個開發工具是一組針對封包快速處理的函式庫及驅動程式，其目的是讓應用程式不用透過kernel直接處理訊息(message)，並且將電腦的實體資源如cpu、ram等跟其它程序進行隔離，因而提高處理速度。
-              </p>
-              <img src="images/report/1041713/2.2-2.jpg" alt="2.2-2" class="img_center">
-              <p>封包轉送工具之架構圖</p>
+                開發過程中，更清楚理解書上的網路理論知識，以撰寫程式的方式將這個過程實作出來，令我對封包傳輸原理更加清楚，更能理解網路再傳輸過程究竟怎麼處理的。</p>
+              <p>DPDK（Data Plane Development
+                Kit）為Intel開源的專案，這個開發工具是一組針對封包快速處理的函式庫及驅動程式，其目的是讓應用程式不用透過kernel直接處理訊息(message)，並且將電腦的實體資源如cpu、ram等跟其它程序進行隔離，因而提高處理速度。</p>
+              <div class="div_pacture">
+                <img src="images/report/1041713/2.2-2.png" alt="2.2-2" class="img_center">
+                <p>封包轉送工具之架構圖</p>
+              </div>
             </div>
-          
+
           </div>
 
 
