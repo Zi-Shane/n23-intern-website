@@ -141,9 +141,9 @@ ul.nav-pills {
 
           <div class="mb-5 element-animate">
             <h1 class="mb-3">沈明儒的實習報告</h1>
-            <p class="post-meta">June 8, 2018 &bull; Posted by
+            <p class="post-meta">November 28, 2018 &bull; Posted by
               <a href="#">沈明儒</a> in
-              <a href="#">#1062</a>
+              <a href="#">#1071</a>
             </p>
           </div>
         </div>
@@ -426,6 +426,19 @@ ul.nav-pills {
 			<p align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=x=\frac{{x}'}{{w}'}=\frac{a_{11}u&plus;a_{21}v&plus;a_{31}}{a_{13}u&plus;a_{23}v&plus;a_{33}},y=\frac{{y}'}{{w}'}=\frac{a_{12}u&plus;a_{22}v&plus;a_{32}}{a_{13}u&plus;a_{23}v&plus;a_{33}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?x=\frac{{x}'}{{w}'}=\frac{a_{11}u&plus;a_{21}v&plus;a_{31}}{a_{13}u&plus;a_{23}v&plus;a_{33}},y=\frac{{y}'}{{w}'}=\frac{a_{12}u&plus;a_{22}v&plus;a_{32}}{a_{13}u&plus;a_{23}v&plus;a_{33}}" title="x=\frac{{x}'}{{w}'}=\frac{a_{11}u+a_{21}v+a_{31}}{a_{13}u+a_{23}v+a_{33}},y=\frac{{y}'}{{w}'}=\frac{a_{12}u+a_{22}v+a_{32}}{a_{13}u+a_{23}v+a_{33}}" /></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)</p>
 			<p align="justify">代入程式內即可求得透視變換圖形，轉換過程可能有小數點，須以雙線性插值或雙立方插值進行處理。</p>
 			<br>
+			<h3 id="移動最小平方法">
+              <b>7.移動最小平方法</b>
+			</h3>
+			<br>
+			<p align="justify">　　藉於人體在照片上的姿態並不會固定，衣服也必須跟著變化才能形成對應的姿態。要讓一張平面圖變換不同的圖形不是一件簡單的事，在此，我使用了移動最小平方法<a href="#r23" class=class_content>[23]</a>進行轉換。</p>
+			<p align="justify">　　該方法是假設P為原圖像中控制點的位置，Q為轉移後控制點的位置，每個像素點座標為V，構建對應變換lv(x)，計算圖像變形後像素點的位置。公式式(3)如下：</p>
+			<p align="center"><a href="https://www.codecogs.com/eqnedit.php?latex=\sum_{i}w_{i}\left&space;|&space;lv(p_{i}-q_{i})&space;\right&space;|^{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum_{i}w_{i}\left&space;|&space;lv(p_{i}-q_{i})&space;\right&space;|^{2}" title="\sum_{i}w_{i}\left | lv(p_{i}-q_{i}) \right |^{2}" /></a></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)</p>
+			<p align="justify">原論文分為三種方法對圖像進行變形，分別是仿射變換、相似變換以及剛性變換。由於剛性變換形成的效果最好，在此我僅介紹如何使用剛性變換。</p>
+			<p align="justify">剛性變換其實是仿射變換的其中一個特殊子集，它的特性就是不包含任何縮放效果，因此我們必須限制它的轉換矩陣M，使得M^T M=I,就可以得到它的剛性變形效果。</p>
+			<p align="justify">　　圖17是經過剛性變換後所形成的變形結果，左圖的7個藍點是我所設定的原圖像控制點，也就是P，而右圖的藍點則是轉移後控制點，也就是Q，我利用公式換算每一個像素點所移動的位置對圖片進行填充，最後成功求得變換後的圖形，由圖中也能看出此方法對於轉換帶有紋理的圖形效果很好。</p>
+			<p align="center"><img src="images/report/1041702/剛性變形.png" alt="Image placeholder" class="img-fluid mb-4"></p>
+			<p align="center">圖 15 (左)原圖(右)剛性變形後結果</p>
+			<br>
 			<hr />
           </article>
           
@@ -479,6 +492,7 @@ ul.nav-pills {
 		  <p id="r20" align="justify">[20]N. Dalal, "INRIA person dataset", On Web, 2005. URL:http://pascal.inrialpes.fr/data/human/</p>
 		  <p id="r21" align="justify">[21]P. Pérez, M. Gangnet, and A. Blake, “Poisson image editing”, ACM Transactions on Graphics (TOG) , vol. 22 Issue 3, pp. 313-318, July 2003</p>
 		  <p id="r22" align="justify">[22]R. Keys, “Cubic convolution interpolation for digital image processing”, IEEE Transactions on Acoustics, Speech, and Signal Processing, vol.29, Issue 6, pp.1153-1160, December 1981</p>
+		  <p id="r23" align="justify">[23]	S. Schaefer, T. McPhail, J. Warren,” Image deformation using moving least squares”, ACM Transactions on Graphics (TOG), vol. 25 Issue3, pp.533-540, July 2006</p>
 		  </font>
 		  </h6>
         </div>
@@ -537,6 +551,7 @@ ul.nav-pills {
 			<li class="nav-item"><a href="#關節點定位3" class="nav-link">4.關節點定位</a></li>
 			<li class="nav-item"><a href="#匈牙利算法" class="nav-link">5.匈牙利算法</a></li>
 			<li class="nav-item"><a href="#透視變換" class="nav-link">6.透視變換</a></li>
+			<li class="nav-item"><a href="#移動最小平方法" class="nav-link">7.移動最小平方法</a></li>
 		</ul>
 	</li>
 	<li class="nav-item"> <a href="#自我評估及心得感想" class="nav-link">自我評估及心得感想</a></li>
